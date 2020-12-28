@@ -1,0 +1,7 @@
+TODO :
+
+Basculer sur DB MySQL
+
+Acheter hébergement chez o2switch
+
+Acheter le template front
