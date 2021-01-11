@@ -1,7 +1,9 @@
 TODO :
 
-Basculer sur DB MySQL
-
 Acheter hébergement chez o2switch
 
-Acheter le template front
+Mettre en place l'archi front sur le template acheté: 
+
+- brancher à l'API Node
+- mettre en place redux
+- ressortir liste prestations pour test
