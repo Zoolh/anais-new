@@ -91,20 +91,15 @@ export default function HeaderLinks(props) {
   return (
     <List className={classes.list + " " + classes.mlAuto}>
       <ListItem className={classes.listItem}>
-        <CustomDropdown
-          noLiPadding
-          navDropdown
-          hoverColor={dropdownHoverColor}
-          buttonText="Présentations"
-          buttonProps={{
-            className: classes.navLink,
-            color: "transparent"
-          }}
-          dropdownList={[
-            <Link to="/" className={classes.dropdownLink}>Choix 1</Link>,
-            <Link to="/" className={classes.dropdownLink}>Choix 2</Link>
-          ]}
-        />
+        <Link to="/" className={classes.dropdownLink}>
+          <Button
+            className={classes.navLink}
+            color="transparent"
+          >
+            A Propos
+        </Button>
+        </Link>
+
       </ListItem>
       <ListItem className={classes.listItem}>
         <CustomDropdown
@@ -117,56 +112,53 @@ export default function HeaderLinks(props) {
             color: "transparent"
           }}
           dropdownList={[
-            <Link
-              to="/"
-              className={classes.dropdownLink}
-              onClick={e => smoothScroll(e, "headers")}>
-                A la carte
-            </Link>,
-           <Link to="/formules-page" className={classes.dropdownLink}>Formules</Link>
+            <Link to="/formules-page" className={classes.dropdownLink}>Style</Link>,
+            <Link to="/formules-page" className={classes.dropdownLink}>Beauté / Visagisme</Link>,
           ]}
         />
       </ListItem>
       <ListItem className={classes.listItem}>
-        <CustomDropdown
-          noLiPadding
-          navDropdown
-          hoverColor={dropdownHoverColor}
-          buttonText="Ateliers"
-          buttonProps={{
-            className: classes.navLink,
-            color: "transparent"
-          }}
-          dropdownList={[
-            <Link to="/about-us" className={classes.dropdownLink}>
-              <AccountBalance className={classes.dropdownIcons} /> Choix 1
-            </Link>,
-            <Link to="/blog-post" className={classes.dropdownLink}>
-              <ArtTrack className={classes.dropdownIcons} /> Choix 2
-            </Link>
-          ]}
-        />
+      <Link to="/" className={classes.dropdownLink}>
+          <Button
+            className={classes.navLink}
+            color="transparent"
+          >
+            Ateliers
+        </Button>
+        </Link>
       </ListItem>
 
       <ListItem className={classes.listItem}>
-        <CustomDropdown
-          noLiPadding
-          navDropdown
-          hoverColor={dropdownHoverColor}
-          buttonText="Contacts"
-          buttonProps={{
-            className: classes.navLink,
-            color: "transparent"
-          }}
-          dropdownList={[
-            <Link to="/about-us" className={classes.dropdownLink}>
-              <AccountBalance className={classes.dropdownIcons} /> Choix 1
-            </Link>,
-            <Link to="/blog-post" className={classes.dropdownLink}>
-              <ArtTrack className={classes.dropdownIcons} /> Choix 2
-            </Link>
-          ]}
-        />
+      <Link to="/" className={classes.dropdownLink}>
+          <Button
+            className={classes.navLink}
+            color="transparent"
+          >
+            bons Cadeaux
+        </Button>
+        </Link>
+      </ListItem>
+
+      <ListItem className={classes.listItem}>
+      <Link to="/" className={classes.dropdownLink}>
+          <Button
+            className={classes.navLink}
+            color="transparent"
+          >
+            F.A.Q
+        </Button>
+        </Link>
+      </ListItem>
+
+      <ListItem className={classes.listItem}>
+      <Link to="/" className={classes.dropdownLink}>
+          <Button
+            className={classes.navLink}
+            color="transparent"
+          >
+            Contacts
+        </Button>
+        </Link>
       </ListItem>
 
     </List>

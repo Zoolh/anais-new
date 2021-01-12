@@ -72,33 +72,7 @@ export default function LandingPage({ ...rest }) {
           <SectionWork />
         </div>
       </div>
-      <Footer
-        content={
-          <div>
-            <div className={classes.left}>
-              <List className={classes.list}>
-                <ListItem className={classes.inlineBlock}>
-                  <a
-                    href="https://www.creative-tim.com/presentation?ref=mkpr-landing"
-                    target="_blank"
-                    className={classes.block}
-                  >
-                    A propos
-                  </a>
-                </ListItem>
-                <ListItem className={classes.inlineBlock}>
-                  <a href="//blog.creative-tim.com/" className={classes.block}>
-                    Blog
-                  </a>
-                </ListItem>
-              </List>
-            </div>
-            <div className={classes.right}>
-              &copy; Nicolas
-            </div>
-          </div>
-        }
-      />
+      <Footer />
     </div>
   );
 }

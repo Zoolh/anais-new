@@ -11,7 +11,13 @@ import ListItem from "@material-ui/core/ListItem";
 // @material-ui/icons
 import Favorite from "@material-ui/icons/Favorite";
 
-import styles from "assets/jss/material-kit-pro-react/components/footerStyle.js";
+import footerStyle from "assets/jss/material-kit-pro-react/components/footerStyle.js";
+import landingPageStyle from "assets/jss/material-kit-pro-react/views/landingPageStyle.js";
+
+const styles = theme => ({
+  ...landingPageStyle,
+  ...footerStyle
+});
 
 const useStyles = makeStyles(styles);
 
@@ -41,7 +47,29 @@ export default function Footer(props) {
         ) : (
           " "
         )}
-        {content}
+         <div>
+            <div className={classes.left}>
+              <List className={classes.list}>
+                <ListItem className={classes.inlineBlock}>
+                  <a
+                    href="#"
+                    target="_blank"
+                    className={classes.block}
+                  >
+                    A propos
+                  </a>
+                </ListItem>
+                <ListItem className={classes.inlineBlock}>
+                  <a href="#" className={classes.block}>
+                    Blog
+                  </a>
+                </ListItem>
+              </List>
+            </div>
+            <div className={classes.right}>
+              &copy; Nicolas
+            </div>
+          </div>
         <div className={classes.clearFix} />
       </div>
     </footer>
@@ -51,5 +79,5 @@ export default function Footer(props) {
 Footer.propTypes = {
   theme: PropTypes.oneOf(["dark", "white", "transparent"]),
   big: PropTypes.bool,
-  content: PropTypes.node.isRequired
+  content: PropTypes.node
 };
