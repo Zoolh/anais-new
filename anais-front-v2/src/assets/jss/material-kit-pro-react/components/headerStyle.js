@@ -13,10 +13,14 @@ import {
   blackColor,
   whiteColor,
   grayColor,
+  rosePoudre,
   hexToRgb
 } from "assets/jss/material-kit-pro-react.js";
 
 const headerStyle = theme => ({
+  logoPrincipal: {
+    paddingTop: "1500px",
+  },
   appBar: {
     display: "flex",
     border: "0",
@@ -25,7 +29,7 @@ const headerStyle = theme => ({
     marginBottom: "20px",
     color: grayColor[15],
     width: "100%",
-    backgroundColor: whiteColor,
+    backgroundColor: rosePoudre,
     boxShadow:
       "0 4px 18px 0px rgba(" +
       hexToRgb(blackColor) +

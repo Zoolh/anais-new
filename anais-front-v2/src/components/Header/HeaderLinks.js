@@ -102,7 +102,17 @@ export default function HeaderLinks(props) {
 
       </ListItem>
       <ListItem className={classes.listItem}>
-        <CustomDropdown
+
+      <Link to="/prestations-page"className={classes.dropdownLink}>
+          <Button
+            className={classes.navLink}
+            color="transparent"
+          >
+            Prestations
+        </Button>
+        </Link>
+
+        {/* <CustomDropdown
           noLiPadding
           navDropdown
           hoverColor={dropdownHoverColor}
@@ -112,40 +122,18 @@ export default function HeaderLinks(props) {
             color: "transparent"
           }}
           dropdownList={[
-            <Link to="/formules-page" className={classes.dropdownLink}>Style</Link>,
-            <Link to="/formules-page" className={classes.dropdownLink}>Beauté / Visagisme</Link>,
+            <Link to="/style-page" className={classes.dropdownLink}>Style</Link>,
+            <Link to="/beaute-page" className={classes.dropdownLink}>Beauté / Visagisme</Link>,
           ]}
-        />
+        /> */}
       </ListItem>
       <ListItem className={classes.listItem}>
-      <Link to="/" className={classes.dropdownLink}>
+      <Link to="/style-page" className={classes.dropdownLink}>
           <Button
             className={classes.navLink}
             color="transparent"
           >
-            Ateliers
-        </Button>
-        </Link>
-      </ListItem>
-
-      <ListItem className={classes.listItem}>
-      <Link to="/" className={classes.dropdownLink}>
-          <Button
-            className={classes.navLink}
-            color="transparent"
-          >
-            bons Cadeaux
-        </Button>
-        </Link>
-      </ListItem>
-
-      <ListItem className={classes.listItem}>
-      <Link to="/" className={classes.dropdownLink}>
-          <Button
-            className={classes.navLink}
-            color="transparent"
-          >
-            F.A.Q
+            Le saviez-vous ?
         </Button>
         </Link>
       </ListItem>
@@ -157,6 +145,17 @@ export default function HeaderLinks(props) {
             color="transparent"
           >
             Contacts
+        </Button>
+        </Link>
+      </ListItem>
+
+      <ListItem className={classes.listItem}>
+      <Link to="/" className={classes.dropdownLink}>
+          <Button
+            className={classes.navLink}
+            color="transparent"
+          >
+            Carte Cadeaux
         </Button>
         </Link>
       </ListItem>

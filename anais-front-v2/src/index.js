@@ -23,7 +23,9 @@ import "assets/scss/material-kit-pro-react.scss?v=1.9.0";
 
 // pages for this product
 import LandingPage from "views/LandingPage/LandingPage.js";
-import FormulesPage from "views/Formules/Formules.js";
+import StylePage from "views/StylePage/StylePage.js";
+import BeautePage from "views/BeautePage/BeautePage.js";
+import PrestationsPage from "views/PrestationsPage/PrestationsPage";
 
 
 var hist = createBrowserHistory();
@@ -31,7 +33,9 @@ var hist = createBrowserHistory();
 ReactDOM.render(
   <Router history={hist}>
     <Switch>
-      <Route path="/formules-page" component={FormulesPage} />
+      <Route path="/style-page" component={StylePage} />
+      <Route path="/beaute-page" component={BeautePage} />
+      <Route path="/prestations-page" component={PrestationsPage} />
       <Route path="/" component={LandingPage} />
     </Switch>
   </Router>,

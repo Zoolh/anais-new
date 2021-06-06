@@ -36,40 +36,42 @@ export default function LandingPage({ ...rest }) {
   return (
     <div>
       <Header
-        color="transparent"
-        // brand="Material Kit PRO React"
+        color="rosePoudre"
+        brand="Logo Anaïs"
         links={<HeaderLinks dropdownHoverColor="info" />}
         fixed
         changeColorOnScroll={{
           height: 300,
-          color: "info"
+          color: "rosePoudre"
         }}
+        
         {...rest}
       />
-      <Parallax backgroundColor="#fee4de" color="black">
+      {/* <Parallax image={require("assets/img/landing-page/anais-full.jpg")}> */}
+      <Parallax>
         <div className={classes.container}>
-
           <GridContainer color="black">
             <GridItem xs={4} sm={6} md={6}>
+            <img className={classes.imgFleur} src={require("assets/img/landing-page/fleur-blanc.png")}></img>
               <h1 className={classes.title}>ANAïS L.</h1>
               <h4>
                 Chaque femme est différente et a sa propre singularité...
                 Mon objectif est de vous aider à trouver votre équilibre...
                 La mode peut aussi être un outil de bienêtre.
               </h4>
-              <br />
             </GridItem>
             <GridItem xs={4} sm={6} md={6}>
               <ProfilPicture />
             </GridItem>
           </GridContainer>
         </div>
+        
       </Parallax>
       <div className={classNames(classes.main, classes.mainRaised)}>
         <div className={classes.container}>
-          <SectionProduct />
+          {/* <SectionProduct />
           <SectionTeam />
-          <SectionWork />
+          <SectionWork /> */}
         </div>
       </div>
       <Footer />

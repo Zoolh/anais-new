@@ -9,6 +9,10 @@ import {
 
 
 const landingPageStyle = {
+  imgFleur:{
+    width: "30%",
+    textAlign: "left"
+  },
   container: {
     color: whiteColor,
     ...container,

@@ -67,7 +67,12 @@ export default function Header(props) {
     <AppBar className={appBarClasses}>
       <Toolbar className={classes.container}>
         <Button className={classes.title}>
-          <Link to="/">{brand}</Link>
+          <Link to="/">
+            <img src={require("assets/img/landing-page/Logo-complet-AL-sans-fond.jpg")}
+                 className="logoPrincipal" style={{
+                    width: '50%'
+                 }}></img>
+          </Link>
         </Button>
         <Hidden smDown implementation="css" className={classes.hidden}>
           <div className={classes.collapse}>{links}</div>

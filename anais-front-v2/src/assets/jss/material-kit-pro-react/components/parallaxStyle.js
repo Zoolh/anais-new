@@ -11,12 +11,14 @@ import {
 
 const parallaxStyle = {
   parallax: {
+    marginTop: "5%",
     height: "100vh",
     maxHeight: "1600px",
     overflow: "hidden",
     position: "relative",
-    backgroundPosition: "50%",
-    backgroundSize: "cover",
+    backgroundPosition: "100%",
+    backgroundSize: "50%",
+    backgroundRepeat: "no-repeat",
     margin: "0",
     padding: "0",
     border: "0",
