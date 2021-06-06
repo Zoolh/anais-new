@@ -36,37 +36,45 @@ export default function LandingPage({ ...rest }) {
   return (
     <div>
       <Header
-        color="rosePoudre"
+        color="roseCharte"
         brand="Logo Anaïs"
         links={<HeaderLinks dropdownHoverColor="info" />}
         fixed
         changeColorOnScroll={{
           height: 300,
-          color: "rosePoudre"
+          color: "roseCharte"
         }}
-        
-        {...rest}
-      />
-      {/* <Parallax image={require("assets/img/landing-page/anais-full.jpg")}> */}
-      <Parallax>
+        {...rest}/>
+
+      <Parallax 
+        image={require("assets/img/landing-page/anais-full.jpg")}
+        backgroundColor="blancCharte">
+      {/* <Parallax> */}
         <div className={classes.container}>
-          <GridContainer color="black">
+          <GridContainer color="black" className={classes.blocGauche}>
             <GridItem xs={4} sm={6} md={6}>
-            <img className={classes.imgFleur} src={require("assets/img/landing-page/fleur-blanc.png")}></img>
-              <h1 className={classes.title}>ANAïS L.</h1>
-              <h4>
-                Chaque femme est différente et a sa propre singularité...
+            <img className={classes.imgFleur} src={require("assets/img/landing-page/fleur-rose.png")}></img>
+              <h1 className={classes.title}>Anaïs L.</h1>
+              <h4 className={classes.intro}>
+                {/* Chaque femme est différente et a sa propre singularité...
                 Mon objectif est de vous aider à trouver votre équilibre...
-                La mode peut aussi être un outil de bienêtre.
+                La mode peut aussi être un outil de bienêtre. */}
+                L'agence de conseil en image & communication Anaïs.L <br/>
+                Adopte une approche personnalisée et vous accompagne dans la définition de votre image.
               </h4>
+              <h4 className={classes.slogan}>
+                LOOK GOOD TO FEEL GOOD*
+              </h4>
+              <span className={classes.traduction}>*Ca fait du bien de se sentier bien</span>
             </GridItem>
             <GridItem xs={4} sm={6} md={6}>
-              <ProfilPicture />
+              {/* <ProfilPicture /> */}
             </GridItem>
           </GridContainer>
-        </div>
-        
+        </div>        
       </Parallax>
+
+      
       <div className={classNames(classes.main, classes.mainRaised)}>
         <div className={classes.container}>
           {/* <SectionProduct />

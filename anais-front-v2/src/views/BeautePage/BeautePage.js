@@ -65,7 +65,7 @@ export default function BeautePage() {
         fixed
         changeColorOnScroll={{
           height: 100,
-          color: "rosePoudre"
+          color: "roseCharte"
         }}
       />
 

@@ -1,0 +1,25 @@
+@font-face {
+    font-family: "Quentin";
+    src: url(../fonts/Quentin.otf) format('opentype');
+  }
+
+
+@font-face {
+    font-family: "CaviarBold";
+    src: url(../fonts/CaviarDreams_Bold.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: "CaviarBoldItalic";
+    src: url(../fonts/CaviarDreams_BoldItalic.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: "CaviarItalic";
+    src: url(../fonts/CaviarDreams_Italic.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: "CaviarClassique";
+    src: url(../fonts/CaviarDreams.ttf) format('truetype');
+}

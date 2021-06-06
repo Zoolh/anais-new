@@ -146,8 +146,12 @@ const dribbbleColor = "#ea4c89";
 const redditColor = "#ff4500";
 const instagramColor = "#125688";
 
-// Custom color
-const rosePoudre = "#fee4de";
+// Charte graphique Anais - Custom color
+const roseCharte = "#F5CFC4";
+const marronCharte = "#99705E";
+const violetCharte = "#957579";
+const orangeCharte = "#D18B2F";
+const blancCharte = "#F4F1EA";
 
 const transition = {
   transition: "all 0.33s cubic-bezier(0.685, 0.0473, 0.346, 1)"
@@ -496,6 +500,6 @@ export {
   mrAuto,
   btnLink,
   coloredShadow,
-  rosePoudre,
+  roseCharte,
   hexToRgb
 };

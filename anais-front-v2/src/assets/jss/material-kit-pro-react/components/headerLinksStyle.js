@@ -5,6 +5,8 @@ import {
   hexToRgb
 } from "assets/jss/material-kit-pro-react.js";
 
+import FontCharte from "assets/css/font-charte.css";
+
 import tooltip from "assets/jss/material-kit-pro-react/tooltipsStyle.js";
 
 const headerLinksStyle = theme => ({
@@ -63,6 +65,7 @@ const headerLinksStyle = theme => ({
     padding: "0.9375rem",
     fontWeight: "400",
     fontSize: "12px",
+    fontFamily:"CaviarBold",
     textTransform: "uppercase",
     lineHeight: "20px",
     textDecoration: "none",

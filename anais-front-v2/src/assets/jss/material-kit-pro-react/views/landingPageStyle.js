@@ -6,7 +6,7 @@ import {
   mainRaised
 } from "assets/jss/material-kit-pro-react.js";
 
-
+import FontCharte from "assets/css/font-charte.css";
 
 const landingPageStyle = {
   imgFleur:{
@@ -18,8 +18,12 @@ const landingPageStyle = {
     ...container,
     zIndex: "2"
   },
+  blocGauche: {
+    marginTop: "-15%"
+  },
   title: {
     ...title,
+    fontFamily: "Quentin",
     display: "inline-block",
     position: "relative",
     marginTop: "30px",
@@ -27,6 +31,18 @@ const landingPageStyle = {
     color: "black",
     textDecoration: "none",
     font: "arial"
+  },
+  intro: {
+    fontFamily: "CaviarItalic",
+    zIndex:"-1",
+    marginTop: "-20%"
+  },
+  slogan : {
+    fontFamily:"CaviarBoldItalic"
+  },
+  traduction: {
+    fontFamily:"CaviarItalic",
+    fontSize: "12px"
   },
   subtitle: {
     fontSize: "1.313rem",

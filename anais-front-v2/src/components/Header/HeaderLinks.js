@@ -106,8 +106,7 @@ export default function HeaderLinks(props) {
       <Link to="/prestations-page"className={classes.dropdownLink}>
           <Button
             className={classes.navLink}
-            color="transparent"
-          >
+            color="transparent">
             Prestations
         </Button>
         </Link>
@@ -131,8 +130,7 @@ export default function HeaderLinks(props) {
       <Link to="/style-page" className={classes.dropdownLink}>
           <Button
             className={classes.navLink}
-            color="transparent"
-          >
+            color="transparent">
             Le saviez-vous ?
         </Button>
         </Link>
@@ -142,8 +140,7 @@ export default function HeaderLinks(props) {
       <Link to="/" className={classes.dropdownLink}>
           <Button
             className={classes.navLink}
-            color="transparent"
-          >
+            color="transparent">
             Contacts
         </Button>
         </Link>
@@ -153,8 +150,7 @@ export default function HeaderLinks(props) {
       <Link to="/" className={classes.dropdownLink}>
           <Button
             className={classes.navLink}
-            color="transparent"
-          >
+            color="transparent">
             Carte Cadeaux
         </Button>
         </Link>

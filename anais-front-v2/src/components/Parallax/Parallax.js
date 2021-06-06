@@ -59,19 +59,19 @@ export default function Parallax(props) {
   );
 }
 
-Parallax.propTypes = {
-  className: PropTypes.string,
-  filter: PropTypes.oneOf([
-    "primary",
-    "rose",
-    "dark",
-    "info",
-    "success",
-    "warning",
-    "danger"
-  ]),
-  children: PropTypes.node,
-  style: PropTypes.string,
-  image: PropTypes.string,
-  small: PropTypes.bool
-};
+// Parallax.propTypes = {
+//   className: PropTypes.string,
+//   filter: PropTypes.oneOf([
+//     "primary",
+//     "rose",
+//     "dark",
+//     "info",
+//     "success",
+//     "warning",
+//     "danger"
+//   ]),
+//   children: PropTypes.node,
+//   style: PropTypes.string,
+//   image: PropTypes.string,
+//   small: PropTypes.bool
+// };

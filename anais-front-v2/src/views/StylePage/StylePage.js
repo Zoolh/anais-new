@@ -63,7 +63,7 @@ export default function StylePage() {
         fixed
         changeColorOnScroll={{
           height: 100,
-          color: "rosePoudre"
+          color: "roseCharte"
         }}
       />
 

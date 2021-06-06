@@ -13,9 +13,15 @@ import {
   blackColor,
   whiteColor,
   grayColor,
-  rosePoudre,
+  roseCharte,
+  marronCharte,
+  violetCharte,
+  orangeCharte,
+  blancCharte,
   hexToRgb
 } from "assets/jss/material-kit-pro-react.js";
+
+import FontCharte from "assets/css/font-charte.css";
 
 const headerStyle = theme => ({
   logoPrincipal: {
@@ -29,7 +35,7 @@ const headerStyle = theme => ({
     marginBottom: "20px",
     color: grayColor[15],
     width: "100%",
-    backgroundColor: rosePoudre,
+    backgroundColor: roseCharte,
     boxShadow:
       "0 4px 18px 0px rgba(" +
       hexToRgb(blackColor) +
