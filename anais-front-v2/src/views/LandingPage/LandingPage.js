@@ -8,6 +8,8 @@ import { makeStyles } from "@material-ui/core/styles";
 import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
 
+import Box from "@material-ui/core/Box";
+
 // core components
 import Header from "components/Header/Header.js";
 import Footer from "components/Footer/Footer.js";
@@ -15,6 +17,7 @@ import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
 import HeaderLinks from "components/Header/HeaderLinks.js";
 import Parallax from "components/Parallax/Parallax.js";
+import Button from "components/CustomButtons/Button.js";
 
 import ProfilPicture from "components/Pictures/ProfilPicture.js";
 
@@ -46,40 +49,47 @@ export default function LandingPage({ ...rest }) {
         }}
         {...rest}/>
 
-      <Parallax 
+      <Parallax className={classes.mainContainer}
         // image={require("assets/img/landing-page/anais-full.jpg")}
         backgroundColor="blancCharte">
-      {/* <Parallax> */}
-        <div className={classes.container}>
-          <GridContainer color="black" className={classes.blocGauche}>
-            <GridItem xs={4} sm={6} md={6}>
-            <img className={classes.imgFleur} src={require("assets/img/landing-page/fleur-rose.png")}></img>
-              <h1 className={classes.title}>Anaïs L.</h1>
+
+          <GridContainer color="black" className={classes.container}>
+            <GridItem xs={12} sm={6} md={6}>
+            {/* <img className={classes.imgFleur} src={require("assets/img/landing-page/fleur-rose.png")}></img> */}
+
+            <Box   display={{ xs: "none", sm: "block" }}>
+              <h1 className={classes.title}>Anaïs L</h1>
+            </Box>
+              
               <h4 className={classes.intro}>
-                {/* Chaque femme est différente et a sa propre singularité...
-                Mon objectif est de vous aider à trouver votre équilibre...
-                La mode peut aussi être un outil de bienêtre. */}
-                L'agence de conseil en image & communication Anaïs.L <br/>
-                Adopte une approche personnalisée et vous accompagne dans la définition de votre image.
+                Coco Chanelle disait : "Quand une femme est mal habillée on regarde sa robe, mais quand elle est parfaitement vétûe, c'est elle que l'on remarque".<br/>
+                Je m'appelle Anaïs et mon métier est de vous aider à trouver votre style.
               </h4>
               <h4 className={classes.slogan}>
                 LOOK GOOD TO FEEL GOOD*
               </h4>
               <span className={classes.traduction}>*Ca fait du bien de se sentier bien</span>
+              <br/>
+              <Button
+                color="roseCharte"
+                size="lg"
+                href=""
+                target="_blank">
+               Mes prestations
+              </Button>
             </GridItem>
-            <GridItem xs={4} sm={6} md={6}>
-              <ProfilPicture />
+          
+            <GridItem xs={12} sm={6} md={6} >
+              <Box   display={{ xs: "none", sm: "block" }}>
+                <ProfilPicture />
+            </Box>              
             </GridItem>
+           
           </GridContainer>
-        </div>        
       </Parallax>
-
-      
       <div className={classNames(classes.main, classes.mainRaised)}>
         <div className={classes.container}>
-          {/* <SectionProduct />
-          <SectionTeam />
-          <SectionWork /> */}
+          <SectionProduct />
         </div>
       </div>
       <Footer />

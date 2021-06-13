@@ -8,6 +8,7 @@ import typographyStyle from "assets/jss/material-kit-pro-react/views/componentsS
 // Images
 // import portraitAnais from 'assets/img/landing-page/anais-portrait-resize.jpg';
 import portraitAnais from 'assets/img/landing-page/anais-full.jpg';
+// import portraitAnais from 'assets/img/landing-page/anais-jardin.jpg';
 
 const useStyles = makeStyles(typographyStyle);
 
@@ -22,8 +23,6 @@ export default function ProfilPicture() {
                 alt="..."
                 className={
                   classes.imgRaised +
-                  " " +
-                  classes.imgRoundedCircle +
                   " " +
                   classes.imgFluid
                 }
