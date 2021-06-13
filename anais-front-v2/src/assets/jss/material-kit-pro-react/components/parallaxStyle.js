@@ -31,6 +31,7 @@ const parallaxStyle = {
     alignItems: "center"
   },
   filter: {},
+
   primaryColor: {
     "&:before": {
       background: "rgba(" + hexToRgb(blackColor) + ", 0.5)"

@@ -19,6 +19,9 @@ const landingPageStyle = {
     zIndex: "2"
   },
   blocGauche: {
+    // "@media (min-width: 991px)": {
+    //   marginTop: "50%"
+    // },
     marginTop: "-15%"
   },
   title: {

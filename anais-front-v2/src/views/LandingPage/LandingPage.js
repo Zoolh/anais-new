@@ -47,7 +47,7 @@ export default function LandingPage({ ...rest }) {
         {...rest}/>
 
       <Parallax 
-        image={require("assets/img/landing-page/anais-full.jpg")}
+        // image={require("assets/img/landing-page/anais-full.jpg")}
         backgroundColor="blancCharte">
       {/* <Parallax> */}
         <div className={classes.container}>
@@ -68,7 +68,7 @@ export default function LandingPage({ ...rest }) {
               <span className={classes.traduction}>*Ca fait du bien de se sentier bien</span>
             </GridItem>
             <GridItem xs={4} sm={6} md={6}>
-              {/* <ProfilPicture /> */}
+              <ProfilPicture />
             </GridItem>
           </GridContainer>
         </div>        
