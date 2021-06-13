@@ -9,27 +9,26 @@ import {
 import FontCharte from "assets/css/font-charte.css";
 
 const landingPageStyle = {
-  imgFleur:{
-    width: "30%",
-    textAlign: "left"
-  },
+  // imgFleur:{
+  //   marginTop: "25%",
+  //   width: "30%",
+  //   textAlign: "left"
+  // },
+  // mainContainer:{
+  //   marginTop:"20%",
+  //   paddingTop: "80%"
+  // },
   container: {
     color: whiteColor,
     ...container,
     zIndex: "2"
-  },
-  blocGauche: {
-    // "@media (min-width: 991px)": {
-    //   marginTop: "50%"
-    // },
-    marginTop: "-15%"
   },
   title: {
     ...title,
     fontFamily: "Quentin",
     display: "inline-block",
     position: "relative",
-    marginTop: "30px",
+    marginTop: "30%",
     minHeight: "32px",
     color: "black",
     textDecoration: "none",
@@ -38,7 +37,7 @@ const landingPageStyle = {
   intro: {
     fontFamily: "CaviarItalic",
     zIndex:"-1",
-    marginTop: "-20%"
+    // marginTop: "-20%"
   },
   slogan : {
     fontFamily:"CaviarBoldItalic"
