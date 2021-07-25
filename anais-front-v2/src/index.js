@@ -1,19 +1,3 @@
-/*!
-
-=========================================================
-* Material Kit PRO React - v1.9.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/material-kit-pro-react
-* Copyright 2020 Creative Tim (https://www.creative-tim.com)
-
-* Coded by Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
 import React from "react";
 import ReactDOM from "react-dom";
 import { createBrowserHistory } from "history";
@@ -26,7 +10,7 @@ import LandingPage from "views/LandingPage/LandingPage.js";
 import StylePage from "views/StylePage/StylePage.js";
 import BeautePage from "views/BeautePage/BeautePage.js";
 import PrestationsPage from "views/PrestationsPage/PrestationsPage";
-
+import AProposPage from "views/APropos/AProposPage.js";
 
 var hist = createBrowserHistory();
 
@@ -36,6 +20,7 @@ ReactDOM.render(
       <Route path="/style-page" component={StylePage} />
       <Route path="/beaute-page" component={BeautePage} />
       <Route path="/prestations-page" component={PrestationsPage} />
+      <Route path="/a-propos-page" component={AProposPage} />
       <Route path="/" component={LandingPage} />
     </Switch>
   </Router>,
