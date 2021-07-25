@@ -91,11 +91,10 @@ export default function HeaderLinks(props) {
   return (
     <List className={classes.list + " " + classes.mlAuto}>
       <ListItem className={classes.listItem}>
-        <Link to="/" className={classes.dropdownLink}>
+        <Link to="/a-propos-page" className={classes.dropdownLink}>
           <Button
             className={classes.navLink}
-            color="transparent"
-          >
+            color="transparent">
             A Propos
         </Button>
         </Link>
