@@ -9,7 +9,12 @@ import {
   cardTitle,
   blackColor,
   whiteColor,
-  hexToRgb
+  hexToRgb,
+  roseCharte,
+  marronCharte,
+  violetCharte,
+  orangeCharte,
+  blancCharte
 } from "assets/jss/material-kit-pro-react.js";
 
 const testimonialsSection = {
@@ -19,19 +24,19 @@ const testimonialsSection = {
   title,
   description,
   cardTitle,
-  sectionDark: {
-    ...sectionDark,
-    "& $cardDescription": {
-      color: "rgba(" + hexToRgb(whiteColor) + ", 0.76)"
-    },
-    "& $cardTitle": {
-      color: whiteColor
-    },
-    backgroundSize: "550% 450%"
-  },
+  // sectionDark: {
+  //   ...sectionDark,
+  //   "& $cardDescription": {
+  //     color: "rgba(" + hexToRgb(whiteColor) + ", 0.76)"
+  //   },
+  //   "& $cardTitle": {
+  //     color: whiteColor
+  //   },
+  //   backgroundSize: "550% 450%"
+  // },
   cardDescription: {
     ...description,
-    fontFamily:"CaviarItalic !important",
+    fontFamily: "CaviarItalic !important",
     fontSize: "1.5rem !important"
   },
   cardTitle: {
@@ -68,10 +73,11 @@ const testimonialsSection = {
     }
   },
   testimonials: {
-    padding: "80px 0",
+    padding: "20px 0",
     "& $cardDescription": {
       fontFamily: "CaviarItalic",
-    }
+    },
+    backgroundColor: blancCharte
   },
   textCenter: {
     textAlign: "center"
@@ -91,11 +97,11 @@ const testimonialsSection = {
     width: "24px",
     height: "24px"
   },
-  testimonial2: {
-    "& .slick-dots": {
-      display: "none !important"
-    }
-  },
+  // testimonial2: {
+  //   "& .slick-dots": {
+  //     display: "none !important"
+  //   }
+  // },
   card2: {
     maxWidth: "650px",
     margin: "60px auto",

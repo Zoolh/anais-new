@@ -501,5 +501,9 @@ export {
   btnLink,
   coloredShadow,
   roseCharte,
+  marronCharte,
+  violetCharte,
+  orangeCharte,
+  blancCharte,
   hexToRgb
 };

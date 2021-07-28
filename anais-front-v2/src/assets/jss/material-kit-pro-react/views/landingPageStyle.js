@@ -3,6 +3,7 @@ import {
   title,
   main,
   whiteColor,
+  blancCharte,
   mainRaised
 } from "assets/jss/material-kit-pro-react.js";
 
@@ -36,14 +37,14 @@ const landingPageStyle = {
   },
   intro: {
     fontFamily: "CaviarItalic",
-    zIndex:"-1",
+    zIndex: "-1",
     // marginTop: "-20%"
   },
-  slogan : {
-    fontFamily:"CaviarBoldItalic"
+  slogan: {
+    fontFamily: "CaviarBoldItalic"
   },
   traduction: {
-    fontFamily:"CaviarItalic",
+    fontFamily: "CaviarItalic",
     fontSize: "12px"
   },
   subtitle: {
@@ -56,6 +57,12 @@ const landingPageStyle = {
   },
   mainRaised: {
     ...mainRaised
+  },
+  mainSection: {
+    // width: "80% !important",
+    // marginLeft: "12% !important",
+    backgroundColor : blancCharte,
+    // height: "20px !important"
   },
   block: {
     color: "inherit",

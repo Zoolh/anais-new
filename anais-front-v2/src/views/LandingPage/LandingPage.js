@@ -87,7 +87,7 @@ export default function LandingPage({ ...rest }) {
 
         </GridContainer>
       </Parallax>
-      <div className={classNames(classes.main, classes.mainRaised)}>
+      <div className={classNames(classes.main, classes.mainRaised, classes.mainSection)}>
         <div className={classes.container}>
           <TemoignagesSection />
         </div>

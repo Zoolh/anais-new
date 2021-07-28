@@ -4,7 +4,6 @@ import Carousel from "react-slick";
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
 // @material-ui/icons
-import FormatQuote from "@material-ui/icons/FormatQuote";
 import Star from "@material-ui/icons/Star";
 // core components
 import GridContainer from "components/Grid/GridContainer.js";
@@ -17,9 +16,6 @@ import Muted from "components/Typography/Muted.js";
 import Warning from "components/Typography/Warning.js";
 
 import testimonialsStyle from "assets/jss/material-kit-pro-react/views/sectionsSections/temoignagesStyle";
-
-import kendall from "assets/img/faces/kendall.jpg";
-import christian from "assets/img/faces/christian.jpg";
 
 const useStyles = makeStyles(testimonialsStyle);
 
@@ -36,14 +32,8 @@ export default function SectionTestimonials({ ...rest }) {
   return (
     <div className="cd-section" {...rest}>
 
-      <div
-        className={
-          classes.testimonials +
-          " " +
-          classes.testimonial2
-
-        }>
-        <div className={classes.container}>
+      <div className={classes.testimonials}>
+        <div className={classes.container}  >
           <GridContainer>
             <GridItem xs={12} sm={12} md={12}>
               <Carousel {...settings}>
