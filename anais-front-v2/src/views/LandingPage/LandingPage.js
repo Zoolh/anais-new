@@ -1,12 +1,9 @@
 /*eslint-disable*/ import React from "react";
-// nodejs library to set properties for components
-import PropTypes from "prop-types";
+
 // nodejs library that concatenates classes
 import classNames from "classnames";
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
-import List from "@material-ui/core/List";
-import ListItem from "@material-ui/core/ListItem";
 
 import Box from "@material-ui/core/Box";
 
@@ -60,7 +57,7 @@ export default function LandingPage({ ...rest }) {
 
             <h4 className={classes.intro}>
               Votre agence de conseil en image & communication <br/>
-              adopte une approche personnalisée et vous accompagne dans la définition de votre image.
+              adopte une approche personnalisée et vous accompagne avec bienveillance dans la définition de votre image.
             </h4>
             <br/>
             <h4 className={classes.slogan}>

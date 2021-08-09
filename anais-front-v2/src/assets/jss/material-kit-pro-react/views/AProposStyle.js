@@ -23,10 +23,10 @@ const aboutUsStyle = {
     "&, & + h1": {
       color: dark,
       fontFamily: "Quentin",
-    },
-    h4: {
-      fontFamily: "CaviarItalic",
     }
+  },
+  subTitle:{
+    fontFamily: "CaviarItalic !important",
   },
   textCenter: {
     textAlign: "center"

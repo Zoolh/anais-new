@@ -6,12 +6,8 @@ import classNames from "classnames";
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
 // core components
-import Header from "components/Header/Header.js";
-import HeaderLinks from "components/Header/HeaderLinks.js";
-import Parallax from "components/Parallax/Parallax.js";
 import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
-import Footer from "components/Footer/Footer.js";
 import Card from "components/Card/Card.js";
 import CardHeader from "components/Card/CardHeader.js";
 import CardBody from "components/Card/CardBody.js";
@@ -20,11 +16,13 @@ import CardFooter from "components/Card/CardFooter.js";
 import formulesStyle from "assets/jss/material-kit-pro-react/views/formulesStyle.js";
 
 // images
-import cardProduct1 from "assets/img/examples/card-product1.jpg";
-import imageTest from "assets/img/landing-page/anais-portrait.jpg";
+// import imageTest from "assets/img/landing-page/anais-portrait.jpg";
+import imageTest1 from "assets/img/assets-anais/formules/background-carte-formule.jpg";
+
 
 // Services 
 import FormuleServices from "../../../services/formule-services";
+
 
 // Import Modal
 import ModalDescription from "../modals/FormuleDescriptionModal";
@@ -56,33 +54,30 @@ export default function SectionFormules() {
 
   return (
     <div >
-
       <div className={classNames(classes.section)}>
         <div className={classes.container}>
           <div className={classes.relatedProducts}>
-            <GridContainer>
+            <GridContainer className={classes.formulesContainer}>
               {listeForumles.map((formule, index) => {
                 return (
-                  <GridItem sm={6} md={3} key={index} onClick={() => setOpenFormuleModal(true)}>
-                    <Card product>
+                  <GridItem sm={6} md={3} lg={6} key={index} onClick={() => setOpenFormuleModal(true)} >
+                    <Card product className={classes.formuleCard}>
                       <CardHeader image>
-                          {/* <img src={cardProduct1} alt="cardProduct" /> */}
-                          <img src={imageTest} alt="cardProduct" />
+                          <img src={imageTest1} alt="cardProduct" />
                       </CardHeader>
                       <CardBody>
                         <h6
                           className={classNames(
                             classes.cardCategory,
                             classes.textRose
-                          )}>
-                          Formule {formule.id}
+                          )}>                     
                         </h6>
                         <h4 className={classes.cardTitle}>{formule.libelle}</h4>
-                        <div className={classes.cardDescription}>{formule.description}</div>
+                        <div className={classes.cardDescription}>{formule.descriptionCourte}</div>
                       </CardBody>
                       <CardFooter className={classes.justifyContentBetween}>
                         <div className={classes.price}>
-                          <h4>Tarif : {formule.tarif}€</h4>
+                          <h4 className={classes.tarif}>Durée : {formule.duree}</h4>
                         </div>
                       </CardFooter>
                       <ModalDescription formule={formule} />
@@ -94,7 +89,6 @@ export default function SectionFormules() {
           </div>
         </div>
       </div>
-    
     </div>
   );
 }

@@ -7,7 +7,12 @@ import {
   title,
   cardTitle,
   grayColor,
-  roseColor
+  roseColor,
+  roseCharte,
+  marronCharte,
+  violetCharte,
+  orangeCharte,
+  blancCharte
 } from "assets/jss/material-kit-pro-react.js";
 
 import tooltipsStyle from "assets/jss/material-kit-pro-react/tooltipsStyle.js";
@@ -15,6 +20,13 @@ import imagesStyles from "assets/jss/material-kit-pro-react/imagesStyles.js";
 import customSelectStyle from "assets/jss/material-kit-pro-react/customSelectStyle.js";
 
 const productStyle = {
+  formulesContainer: {
+    flexGrow: 1,
+    justifyContent: "center",
+  },
+  formuleCard: {
+    minHeight: "48rem"
+  },
   mlAuto,
   main,
   ...imagesStyles,
@@ -33,19 +45,31 @@ const productStyle = {
   },
   title: {
     ...title,
-    marginBottom: 0
+    marginBottom: 0,
+    fontFamily: "CaviarBoldItalic !important",
+    textTransform: "uppercase"
+  },
+  subTitle:{
+    fontFamily: "CaviarItalic !important",
   },
   sectionGray: {
     background: grayColor[14]
   },
   mainPrice: {
-    margin: "10px 0px 25px"
+    margin: "10px 0px 25px",
+    fontFamily: "CaviarBoldItalic !important"
+  },
+  tarif:{ 
+    fontFamily: "CaviarBoldItalic !important"
   },
   textCenter: {
     textAlign: "center!important"
   },
   features: {
     paddingTop: "30px"
+  },
+  detailsBtn:{
+    fontFamily: "CaviarBold !important"
   },
   productPage: {
     backgroundColor: grayColor[2],
@@ -99,10 +123,11 @@ const productStyle = {
     minHeight: "30vh",
     maxHeight: "600px",
     height: "auto",
-    backgroundPosition: "top center"
+    backgroundPosition: "top center",
+    backgroundColor: blancCharte +"!important"
   },
   relatedProducts: {
-    marginTop: "50px",
+    // marginTop: "50px",
     "& $title": {
       marginBottom: "80px"
     }
@@ -119,14 +144,17 @@ const productStyle = {
   },
   cardTitle: {
     ...cardTitle,
-    textAlign: "center"
+    textAlign: "center",
+    fontFamily: "CaviarBoldItalic !important",
+    textTransform: "uppercase"
   },
   cardDescription: {
     textAlign: "center",
-    color: grayColor[0]
+    color: marronCharte,
+    fontFamily: "CaviarItalic !important",
   },
   textRose: {
-    color: roseColor[0]
+    color: roseCharte
   },
   justifyContentBetween: {
     justifyContent: "space-between!important"
@@ -186,6 +214,22 @@ const productStyle = {
     width: "18px",
     height: "18px",
     position: "relative"
+  },
+  listePresta:{
+    fontFamily: "CaviarClassique!important"
+    // listStyleType: "none",
+    // listStyleImage:"url('src/assets/img/assets-anais/Trace-1411.png')"
+  },
+  description: {
+    fontFamily: "CaviarClassique!important",
+  },
+  sectionTitle: {
+    fontFamily: "CaviarBold !important",
+
+  },
+  dialogPaper: {
+    minWidth : "80rem"
+    // height: "100rem"
   }
 };
 

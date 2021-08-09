@@ -52,18 +52,24 @@ export default function AProposPage({ ...rest }) {
                 classes.mrAuto,
                 classes.textCenter
               )}>
+                <br/>
+                <br/>
               <h1 className={classes.title}>A Propos</h1>
-              <h4>
-                Coco chanel disait que quand une femme est mal habillée, on remarque sa robe, mais quand elle est parfaitement vêtue,
+              <h4 className={classes.subTitle}>
+              Coco chanel disait que quand une femme est mal habillée, on  ne remarque que sa robe, mais quand elle est parfaitement vêtue,
                 c’est elle que l’on remarque. Et elle avait raison.
-                Je m’appelle Anaïs, et c’est mon métier de vous aider à trouver votre style.
+                Je m’appelle Anaïs, et c’est mon métier de vous aider à vous mettre en valeur et de faire en sorte que, quelque soit votre morphologie, 
+                vous vous sentiez bien dans votre corps .<br/>
+                 Mon objectif de comprendre vos besoins qu'ils soient personnels ou professionnels,
+                découvrir votre personnalité, vos habitudes de vie, et surtout vos envies afin de valoriser votre image et pouvoir déterminer 
+                ensemble le style qui vous correspond le mieux.<br/>                
                 Passionnée par la mode et la beauté depuis toujours, j’ai obtenu un Master en Marketing spécialité Mode & Luxe,
                 au terme duquel j’ai pu travailler auprès de grandes marques pendant plus de cinq ans. J’ai ensuite décidé de
                 concrétiser ma passion en intégrant un centre de formation IDM pour aujourd’hui pouvoir la partager avec vous.
-                Dynamique et enjouée, je vous promets des séances à la fois agréables et efficaces au cours desquelles vous pourrez
-                profiter de mon expertise tout en prenant soin de vous.
-                Alors si vous souhaitez reprendre le contrôle de votre image, lancez-vous !<br />
-                Ensemble, nous trouverons un style authentique qui saura révéler votre personnalité.
+                Je vous promets des séances à la fois agréables et efficaces au cours desquelles vous pourrez
+                profiter de mon expertise tout en prenant soin de vous. Ensemble, nous trouverons un style authentique qui saura révéler votre personnalité.
+                Alors, si vous souhaitez reprendre le contrôle de votre image, lancez-vous !<br />
+
               </h4>
             </GridItem>
           </GridContainer>
@@ -72,6 +78,8 @@ export default function AProposPage({ ...rest }) {
           <br />
         </div>
       </Parallax>
+      <br/>
+      <br/>
       <div className={classNames(classes.main, classes.mainRaised)}>
         <div className={classes.container}>
           <PresentationSection />

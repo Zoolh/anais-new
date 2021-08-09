@@ -109,28 +109,13 @@ export default function HeaderLinks(props) {
             Prestations
         </Button>
         </Link>
-
-        {/* <CustomDropdown
-          noLiPadding
-          navDropdown
-          hoverColor={dropdownHoverColor}
-          buttonText="Offres"
-          buttonProps={{
-            className: classes.navLink,
-            color: "transparent"
-          }}
-          dropdownList={[
-            <Link to="/style-page" className={classes.dropdownLink}>Style</Link>,
-            <Link to="/beaute-page" className={classes.dropdownLink}>Beauté / Visagisme</Link>,
-          ]}
-        /> */}
       </ListItem>
       <ListItem className={classes.listItem}>
       <Link to="/style-page" className={classes.dropdownLink}>
           <Button
             className={classes.navLink}
             color="transparent">
-            Le saviez-vous ?
+            F.A.Q
         </Button>
         </Link>
       </ListItem>
@@ -154,7 +139,6 @@ export default function HeaderLinks(props) {
         </Button>
         </Link>
       </ListItem>
-
     </List>
   );
 }

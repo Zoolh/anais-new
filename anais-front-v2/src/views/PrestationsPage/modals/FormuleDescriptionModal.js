@@ -5,28 +5,19 @@ import Slide from "@material-ui/core/Slide";
 import Dialog from "@material-ui/core/Dialog";
 import DialogContent from "@material-ui/core/DialogContent";
 
-// @material-ui/icons
-import ShoppingCart from "@material-ui/icons/ShoppingCart";
 // core components
 import Button from "components/CustomButtons/Button.js";
 
 import modalStyle from "assets/jss/material-kit-pro-react/modalStyle.js";
 import popoverStyles from "assets/jss/material-kit-pro-react/popoverStyles.js";
 import tooltipsStyle from "assets/jss/material-kit-pro-react/tooltipsStyle.js";
-import productStyle from "assets/jss/material-kit-pro-react/views/productStyle.js";
-
+import formulesStyle from "assets/jss/material-kit-pro-react/views/formulesStyle.js";
 
 // images
-import product1 from "assets/img/examples/product1.jpg";
-import product2 from "assets/img/examples/product2.jpg";
-import product3 from "assets/img/examples/product3.jpg";
-import product4 from "assets/img/examples/product4.jpg";
-
-import ImageGallery from "react-image-gallery";
+import product3 from "assets/img/assets-anais/formules/background-carte-formule.jpg";
 
 import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
-import Accordion from "components/Accordion/Accordion.js";
 
 import Grid from "@material-ui/core/Grid";
 
@@ -34,7 +25,7 @@ const style = theme => ({
     ...modalStyle(theme),
     ...popoverStyles,
     ...tooltipsStyle,
-    ...productStyle
+    ...formulesStyle
 });
 
 const Transition = React.forwardRef(function Transition(props, ref) {
@@ -45,28 +36,8 @@ const useStyles = makeStyles(style);
 
 export default function ExampleTooltipsPopovers(props) {
 
-    const images = [
-        {
-            original: product3,
-            thumbnail: product3
-        },
-        {
-            original: product4,
-            thumbnail: product4
-        },
-        {
-            original: product1,
-            thumbnail: product1
-        },
-        {
-            original: product2,
-            thumbnail: product2
-        }
-    ];
-
     const { formule } = props;
 
-    // const [anchorElLeft, setAnchorElLeft] = useState(null);
     const [openModal, setOpenModal] = useState(false);
     const classes = useStyles();
     return (
@@ -76,7 +47,9 @@ export default function ExampleTooltipsPopovers(props) {
                 alignItems="center"
                 justify="center">
                 <Grid item>
-                    <Button style={{ backgroundColor: 'transparent', color: 'black' }} onClick={() => setOpenModal(true)}>
+                    <Button className={classes.detailsBtn}
+                        style={{ backgroundColor: 'transparent', color: 'black' }}
+                        onClick={() => setOpenModal(true)}>
                         Détails
                     </Button>
                 </Grid>
@@ -88,79 +61,46 @@ export default function ExampleTooltipsPopovers(props) {
                 onClose={() => setOpenModal(false)}
                 aria-labelledby="large-modal-slide-title"
                 aria-describedby="large-modal-slide-description"
+                classes={{ paper: classes.dialogPaper }}
             >
 
                 <DialogContent>
                     <GridContainer>
-                        <GridItem md={6} sm={6}>
-                            <ImageGallery
-                                showFullscreenButton={false}
-                                showPlayButton={false}
-                                startIndex={3}
-                                items={images}
-                                showThumbnails={true}
-                                renderLeftNav={(onClick, disabled) => {
-                                    return (
-                                        <button
-                                            className='image-gallery-left-nav'
-                                            disabled={disabled}
-                                            onClick={onClick}
-                                        />
-                                    );
-                                }}
-                                renderRightNav={(onClick, disabled) => {
-                                    return (
-                                        <button
-                                            className='image-gallery-right-nav'
-                                            disabled={disabled}
-                                            onClick={onClick}
-                                        />
-                                    );
-                                }}
+                        <GridItem md={4} sm={4} className={classes.imgContainer}>
+                            <img
+                                src={product3}
+                                alt="..."
+                                className={
+                                    classes.imgRaised +
+                                    " " +
+                                    classes.imgFluid
+                                }
+                            />
+                            <br />
+                            <br />
+                            <img
+                                src={product3}
+                                alt="..."
+                                className={
+                                    classes.imgRaised +
+                                    " " +
+                                    classes.imgFluid
+                                }
                             />
                         </GridItem>
-                        <GridItem md={6} sm={6}>
-                            <h2 className={classes.title}>{formule.libelle}</h2>
-                            <h3 className={classes.mainPrice}>{formule.tarif}€</h3>
-                            <Accordion
-                                active={0}
-                                activeColor="rose"
-                                collapses={[
-                                    {
-                                        title: "Description",
-                                        content: (
-                                            <p>
-                                                {formule.description}
-                                            </p>
-                                        )
-                                    },
-                                    {
-                                        title: "Prestations comprises",
-                                        content: (
-                                            <ul>
-                                                {formule.prestation.map((prestation, i) => {
-                                                    return (<li key={i}>{prestation.libelle}</li>)
-                                                })}
+                        <GridItem md={8} sm={8}>
+                            <h4 className={classes.sectionTitle}>PRESTATIONS</h4>
+                            <ul className={classes.listePresta}>
+                                {formule.prestation.map((prestation, i) => {
+                                    return (<li key={i} className={classes.bullet}>{prestation.libelle}</li>)
+                                })}
 
-                                            </ul>
-                                        )
-                                    },
-                                    {
-                                        title: "Avis",
-                                        content: (
-                                            <div>
-                                                <p>"Cette formules est incroyable !"</p>
-                                                <p>"J'ai pris confiance en moi"</p>
-                                            </div>
-                                        )
-                                    }
-                                ]}
-                            />
-                            <GridContainer className={classes.pullRight}>
-                                <Button round color="rose">
-                                    Ajouter au panier &nbsp; <ShoppingCart />
-                                </Button>
-                            </GridContainer>
+                            </ul>
+                            <h4 className={classes.sectionTitle}>DUREE & TARIF</h4>
+                            <p className={classes.description}>
+                                Durée : {formule.duree} <br />
+                                Tarif : {formule.tarif}€
+                            </p>
                         </GridItem>
                     </GridContainer>
                 </DialogContent>

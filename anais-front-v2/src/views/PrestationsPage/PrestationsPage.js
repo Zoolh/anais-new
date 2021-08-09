@@ -27,7 +27,6 @@ import ModalDescription from "./modals/FormuleDescriptionModal";
 
 // Import Sections
 import SectionFormules from "./sections/SectionFormules";
-import SectionALaCarte from "./sections/SectionALaCarte";
 
 const useStyles = makeStyles(formulesStyle
 );
@@ -63,43 +62,26 @@ export default function BeautePage() {
         changeColorOnScroll={{
           height: 100,
           color: "roseCharte"
-        }}
-      />
+        }}/>
 
       <Parallax
-        color="black"
-        backgroundColor="grey"
         className={classes.pageHeader}>
         <div className={classes.container}>
           <br/>
           <GridContainer color="black">
-            <GridItem xs={4} sm={6} md={6}>
-              <br />
-              <br />
+            <GridItem xs={4} sm={8} md={8}>
               <h1 className={classes.title}>Prestations</h1>
-              <p>
-                Choisissez entre des prestations à la carte ou en formule.
-              </p>
+              <h4 className={classes.subTitle}>
+                Retrouvez différentes prestations pour un accompagnement sur mesure.<br/>
+                Que vous souhaitiez simplement un tri de dressing à domicile ou un bilan d'image complet, mon accompagnement
+                reposera toujours sur la bienveillance et l'écoute de vos besoins.<br/>
+                Si vous souhaitez ajuster une formules, n'hésitez pas à me contacter.
+              </h4>
             </GridItem>
-          </GridContainer>
-          <br/><br/>
-
-          {/* <GridContainer color="black">
-            <GridItem xs={4} sm={6} md={6}>
-              <Button>A la carte</Button>
-            </GridItem>
-            <GridItem xs={4} sm={6} md={6}>
-              <Button>En Formule</Button>
-            </GridItem>
-          </GridContainer> */}
-
-          <br/>
-            
+          </GridContainer>            
         </div>
-        
       </Parallax>
 
-      {/* <SectionALaCarte/> */}
       <SectionFormules />
 
       <Footer />
