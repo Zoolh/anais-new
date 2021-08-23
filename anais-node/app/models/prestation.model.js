@@ -11,6 +11,9 @@ module.exports = (sequelize, Sequelize) => {
       },
       duree: {
           type: Sequelize.INTEGER
+      },
+      ordreSortie: {
+        type: Sequelize.INTEGER
       }
     });
   

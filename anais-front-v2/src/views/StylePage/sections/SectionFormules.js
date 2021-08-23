@@ -33,7 +33,7 @@ const useStyles = makeStyles(formulesStyle
 
 export default function SectionFormules() {
 
-  const [listeForumles, setListeFormules] = useState([]);
+  const [listeFormules, setListeFormules] = useState([]);
   const [openFormuleModal, setOpenFormuleModal] = useState(false);
 
   const classes = useStyles();
@@ -60,7 +60,7 @@ export default function SectionFormules() {
         <div className={classes.container}>
           <div className={classes.relatedProducts}>
             <GridContainer>
-              {listeForumles.map((formule, index) => {
+              {listeFormules.map((formule, index) => {
                 return (
                   <GridItem sm={6} md={3} key={index} onClick={() => setOpenFormuleModal(true)}>
                     <Card product>

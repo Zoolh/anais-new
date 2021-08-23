@@ -1,7 +1,7 @@
 import http from "../http-common";
 
 const getAll = () => {
-    return http.get("/formules");
+    return http.get("/formules/getAll");
 };
 
 const get = id => {

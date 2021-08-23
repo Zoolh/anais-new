@@ -12,18 +12,11 @@ import Parallax from "components/Parallax/Parallax.js";
 import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
 import Footer from "components/Footer/Footer.js";
-import Button from "components/CustomButtons/Button.js";
 
 import formulesStyle from "assets/jss/material-kit-pro-react/views/formulesStyle.js";
 
-// images
-import cardProduct1 from "assets/img/examples/card-product1.jpg";
-
 // Services 
 import FormuleServices from "../../services/formule-services";
-
-// Import Modal
-import ModalDescription from "./modals/FormuleDescriptionModal";
 
 // Import Sections
 import SectionFormules from "./sections/SectionFormules";
@@ -33,8 +26,7 @@ const useStyles = makeStyles(formulesStyle
 
 export default function BeautePage() {
 
-  const [listeForumles, setListeFormules] = useState([]);
-  const [openFormuleModal, setOpenFormuleModal] = useState(false);
+  const [listeFormules, setListeFormules] = useState([]);
 
   const classes = useStyles();
 
@@ -69,7 +61,7 @@ export default function BeautePage() {
         <div className={classes.container}>
           <br/>
           <GridContainer color="black">
-            <GridItem xs={4} sm={8} md={8}>
+            <GridItem xs={12} sm={8} md={8}>
               <h1 className={classes.title}>Prestations</h1>
               <h4 className={classes.subTitle}>
                 Retrouvez différentes prestations pour un accompagnement sur mesure.<br/>

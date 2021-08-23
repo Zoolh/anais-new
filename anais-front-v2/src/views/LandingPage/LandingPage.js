@@ -44,14 +44,11 @@ export default function LandingPage({ ...rest }) {
         {...rest} />
 
       <Parallax className={classes.mainContainer}
-        // image={require("assets/img/landing-page/anais-full.jpg")}
         backgroundColor="blancCharte">
 
         <GridContainer color="black" className={classes.container}>
           <GridItem xs={12} sm={6} md={6}>
-            {/* <img className={classes.imgFleur} src={require("assets/img/landing-page/fleur-rose.png")}></img> */}
-
-            <Box display={{ xs: "none", sm: "block" }}>
+            <Box xs={12} display={{ sm: "block" }}>
               <h1 className={classes.title}>Anaïs L</h1>
             </Box>
 

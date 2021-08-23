@@ -35,7 +35,7 @@ const useStyles = makeStyles(formulesStyle
 
 export default function StylePage() {
 
-  const [listeForumles, setListeFormules] = useState([]);
+  const [listeFormules, setListeFormules] = useState([]);
   const [openFormuleModal, setOpenFormuleModal] = useState(false);
 
   const classes = useStyles();

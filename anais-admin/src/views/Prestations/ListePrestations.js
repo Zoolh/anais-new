@@ -138,7 +138,7 @@ export default function TableList() {
           <CardBody>
             <Table
               tableHeaderColor="primary"
-              tableHead={["Nom", "Description", "Tarif", "Durée", "Actions"]}
+              tableHead={["Nom", "Description", "Ordre Sortie", "Actions"]}
               tableData={prestations}
               deletePrestation={handleClickOpenConfirmation}
               detailPrestation={goToCreatePresta}

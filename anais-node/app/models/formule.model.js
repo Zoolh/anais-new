@@ -3,14 +3,26 @@ module.exports = (sequelize, Sequelize) => {
     libelle: {
       type: Sequelize.STRING
     },
+    ordreSortie:{
+      type: Sequelize.INTEGER
+    },
     description: {
-      type: Sequelize.STRING
+      type: Sequelize.TEXT
     },
     tarif: {
       type: Sequelize.INTEGER
     },
     duree: {
-      type: Sequelize.INTEGER
+      type: Sequelize.STRING
+    },
+    sectionAsset: {
+      type: Sequelize.STRING
+    },
+    imagePrincipale: {
+      type: Sequelize.STRING
+    },
+    image2: {
+      type: Sequelize.STRING
     }
   });
 

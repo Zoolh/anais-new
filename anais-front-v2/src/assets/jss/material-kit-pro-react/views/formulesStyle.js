@@ -18,6 +18,7 @@ import {
 import tooltipsStyle from "assets/jss/material-kit-pro-react/tooltipsStyle.js";
 import imagesStyles from "assets/jss/material-kit-pro-react/imagesStyles.js";
 import customSelectStyle from "assets/jss/material-kit-pro-react/customSelectStyle.js";
+import { useMediaQuery } from "@material-ui/core";
 
 const productStyle = {
   formulesContainer: {
@@ -26,6 +27,11 @@ const productStyle = {
   },
   formuleCard: {
     minHeight: "48rem"
+  },
+  dialogueModal:{
+    // display:"none !important",
+    justifyContent: "left",
+
   },
   mlAuto,
   main,
@@ -45,6 +51,7 @@ const productStyle = {
   },
   title: {
     ...title,
+    marginTop:"15%",
     marginBottom: 0,
     fontFamily: "CaviarBoldItalic !important",
     textTransform: "uppercase"
@@ -127,7 +134,6 @@ const productStyle = {
     backgroundColor: blancCharte +"!important"
   },
   relatedProducts: {
-    // marginTop: "50px",
     "& $title": {
       marginBottom: "80px"
     }
@@ -217,8 +223,6 @@ const productStyle = {
   },
   listePresta:{
     fontFamily: "CaviarClassique!important"
-    // listStyleType: "none",
-    // listStyleImage:"url('src/assets/img/assets-anais/Trace-1411.png')"
   },
   description: {
     fontFamily: "CaviarClassique!important",
@@ -228,8 +232,14 @@ const productStyle = {
 
   },
   dialogPaper: {
-    minWidth : "80rem"
-    // height: "100rem"
+    display:"block !important",
+    ["@media (max-height:400px)"]: { minWidth: "0rem" },
+    ["@media (min-height:700px)"]: { minWidth: "80rem" }
+  }
+  ,
+  imgDesc: {
+    // maxHeight:"20em",
+    marginTop:"10%"
   }
 };
 

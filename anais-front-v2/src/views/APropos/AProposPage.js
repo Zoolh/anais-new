@@ -4,10 +4,6 @@ import React from "react";
 import classNames from "classnames";
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
-import List from "@material-ui/core/List";
-import ListItem from "@material-ui/core/ListItem";
-// @material-ui/icons
-import Favorite from "@material-ui/icons/Favorite";
 // core components
 import Header from "components/Header/Header.js";
 import GridContainer from "components/Grid/GridContainer.js";
@@ -41,10 +37,11 @@ export default function AProposPage({ ...rest }) {
         }}
         {...rest} />
 
-      <Parallax small>
+      <Parallax className={classes.pageHeader}>
         <div className={classes.container}>
-          <GridContainer justify="center">
+          <GridContainer justify="center" >
             <GridItem
+              xs={12}
               md={12}
               sm={12}
               className={classNames(
@@ -52,17 +49,15 @@ export default function AProposPage({ ...rest }) {
                 classes.mrAuto,
                 classes.textCenter
               )}>
-                <br/>
-                <br/>
               <h1 className={classes.title}>A Propos</h1>
               <h4 className={classes.subTitle}>
-              Coco chanel disait que quand une femme est mal habillée, on  ne remarque que sa robe, mais quand elle est parfaitement vêtue,
+                Coco chanel disait que quand une femme est mal habillée, on  ne remarque que sa robe, mais quand elle est parfaitement vêtue,
                 c’est elle que l’on remarque. Et elle avait raison.
-                Je m’appelle Anaïs, et c’est mon métier de vous aider à vous mettre en valeur et de faire en sorte que, quelque soit votre morphologie, 
-                vous vous sentiez bien dans votre corps .<br/>
-                 Mon objectif de comprendre vos besoins qu'ils soient personnels ou professionnels,
-                découvrir votre personnalité, vos habitudes de vie, et surtout vos envies afin de valoriser votre image et pouvoir déterminer 
-                ensemble le style qui vous correspond le mieux.<br/>                
+                Je m’appelle Anaïs, et c’est mon métier de vous aider à vous mettre en valeur et de faire en sorte que, quelque soit votre morphologie,
+                vous vous sentiez bien dans votre corps .<br />
+                Mon objectif de comprendre vos besoins qu'ils soient personnels ou professionnels,
+                découvrir votre personnalité, vos habitudes de vie, et surtout vos envies afin de valoriser votre image et pouvoir déterminer
+                ensemble le style qui vous correspond le mieux.<br />
                 Passionnée par la mode et la beauté depuis toujours, j’ai obtenu un Master en Marketing spécialité Mode & Luxe,
                 au terme duquel j’ai pu travailler auprès de grandes marques pendant plus de cinq ans. J’ai ensuite décidé de
                 concrétiser ma passion en intégrant un centre de formation IDM pour aujourd’hui pouvoir la partager avec vous.
@@ -73,13 +68,8 @@ export default function AProposPage({ ...rest }) {
               </h4>
             </GridItem>
           </GridContainer>
-          <br />
-          <br />
-          <br />
         </div>
       </Parallax>
-      <br/>
-      <br/>
       <div className={classNames(classes.main, classes.mainRaised)}>
         <div className={classes.container}>
           <PresentationSection />

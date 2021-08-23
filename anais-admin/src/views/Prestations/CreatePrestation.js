@@ -48,7 +48,8 @@ export default function CreatePrestation(props) {
     libelle: "",
     description: "",
     tarif: null,
-    duree: null
+    duree: null,
+    ordreSortie: null
   };
 
   const [prestation, setPrestation] = useState(initialPrestationState);
@@ -68,7 +69,8 @@ export default function CreatePrestation(props) {
           libelle: response.data.libelle,
           description: response.data.description,
           tarif: response.data.tarif,
-          duree: response.data.duree
+          duree: response.data.duree,
+          ordreSortie: response.data.ordreSortie
         });
       })
       .catch(e => {
@@ -83,7 +85,8 @@ export default function CreatePrestation(props) {
       libelle: prestation.libelle,
       description: prestation.description,
       tarif: prestation.tarif,
-      duree: prestation.duree
+      duree: prestation.duree,
+      ordreSortie: prestation.ordreSortie
     };
 
     PrestationDataService.create(data)
@@ -93,7 +96,8 @@ export default function CreatePrestation(props) {
           libelle: response.data.libelle,
           description: response.data.description,
           tarif: response.data.tarif,
-          duree: response.data.duree
+          duree: response.data.duree,
+          ordreSortie: response.data.ordreSortie
         });
         cleanInput();
         console.log(response.data);
@@ -155,6 +159,18 @@ export default function CreatePrestation(props) {
                     formControlProps={{ fullWidth: true }}
                     onChange={handleInputChange}
                     value={prestation.libelle}
+                    inputProps={{
+                      disabled: isDisable
+                    }}
+                  />
+                </GridItem>
+                <GridItem xs={12} sm={12} md={6}>
+                  <CustomInput
+                    labelText="Ordre sortie"
+                    id="ordreSortie"
+                    formControlProps={{ fullWidth: true }}
+                    onChange={handleInputChange}
+                    value={prestation.ordreSortie}
                     inputProps={{
                       disabled: isDisable
                     }}

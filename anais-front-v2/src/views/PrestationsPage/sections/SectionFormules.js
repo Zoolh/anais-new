@@ -15,11 +15,6 @@ import CardFooter from "components/Card/CardFooter.js";
 
 import formulesStyle from "assets/jss/material-kit-pro-react/views/formulesStyle.js";
 
-// images
-// import imageTest from "assets/img/landing-page/anais-portrait.jpg";
-import imageTest1 from "assets/img/assets-anais/formules/background-carte-formule.jpg";
-
-
 // Services 
 import FormuleServices from "../../../services/formule-services";
 
@@ -32,7 +27,7 @@ const useStyles = makeStyles(formulesStyle
 
 export default function SectionFormules() {
 
-  const [listeForumles, setListeFormules] = useState([]);
+  const [listeFormules, setListeFormules] = useState([]);
   const [openFormuleModal, setOpenFormuleModal] = useState(false);
 
   const classes = useStyles();
@@ -52,28 +47,46 @@ export default function SectionFormules() {
       })
   }
 
+
+  const getImage = (nomSection, nomImage) => {
+    try {
+      return (
+        <img src={require("assets/img/assets-anais/formules/".concat(nomSection)
+          .concat("/")
+          .concat(nomImage)
+          .concat(".jpg"))}
+          alt="rien" />
+      )
+    } catch (error) {
+      return (
+        <img src="" alt="ATTENTE D'UNE IMAGE" />
+      )
+    }
+  }
+
+
   return (
     <div >
       <div className={classNames(classes.section)}>
         <div className={classes.container}>
           <div className={classes.relatedProducts}>
             <GridContainer className={classes.formulesContainer}>
-              {listeForumles.map((formule, index) => {
+              {listeFormules.map((formule, index) => {
                 return (
                   <GridItem sm={6} md={3} lg={6} key={index} onClick={() => setOpenFormuleModal(true)} >
                     <Card product className={classes.formuleCard}>
                       <CardHeader image>
-                          <img src={imageTest1} alt="cardProduct" />
+                        {getImage(formule.sectionAsset, formule.imagePrincipale)}
                       </CardHeader>
                       <CardBody>
                         <h6
                           className={classNames(
                             classes.cardCategory,
                             classes.textRose
-                          )}>                     
+                          )}>
                         </h6>
                         <h4 className={classes.cardTitle}>{formule.libelle}</h4>
-                        <div className={classes.cardDescription}>{formule.descriptionCourte}</div>
+                        <div className={classes.cardDescription}>{formule.description}</div>
                       </CardBody>
                       <CardFooter className={classes.justifyContentBetween}>
                         <div className={classes.price}>

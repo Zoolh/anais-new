@@ -12,6 +12,25 @@ app.use(bodyParser.json());
 
 app.use(bodyParser.urlencoded({ extended: true }));
 
+// Modif pour utilisation du build
+const path = require('path')
+
+app.use(express.static(path.join(__dirname, 'build')));
+
+
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, 'build', 'index.html'));
+});
+
+// simple route
+// app.get("/", (req, res) => {
+//   res.json({ message: "Bienvenue sur l'API Anaïs" });
+// });
+
+// Fin modif pour utilisation du build
+
+
+
 const db = require("./app/models");
 
 // db.sequelize.sync({ force: true }).then(() => {
@@ -22,10 +41,7 @@ db.sequelize.sync({
   console.log("Drop and re-sync db.");
 });
 
-// simple route
-app.get("/", (req, res) => {
-  res.json({ message: "Bienvenue sur l'API Anaïs" });
-});
+
 
 
 require("./app/routes/formule.routes")(app);

@@ -7,18 +7,8 @@ import {
   mainRaised
 } from "assets/jss/material-kit-pro-react.js";
 
-import FontCharte from "assets/css/font-charte.css";
 
 const landingPageStyle = {
-  // imgFleur:{
-  //   marginTop: "25%",
-  //   width: "30%",
-  //   textAlign: "left"
-  // },
-  // mainContainer:{
-  //   marginTop:"20%",
-  //   paddingTop: "80%"
-  // },
   container: {
     color: whiteColor,
     ...container,
@@ -37,8 +27,7 @@ const landingPageStyle = {
   },
   intro: {
     fontFamily: "CaviarItalic",
-    zIndex: "-1",
-    // marginTop: "-20%"
+    zIndex: "-1"
   },
   slogan: {
     fontFamily: "CaviarBoldItalic"
@@ -59,10 +48,7 @@ const landingPageStyle = {
     ...mainRaised
   },
   mainSection: {
-    // width: "80% !important",
-    // marginLeft: "12% !important",
-    backgroundColor : blancCharte,
-    // height: "20px !important"
+    backgroundColor : blancCharte
   },
   block: {
     color: "inherit",

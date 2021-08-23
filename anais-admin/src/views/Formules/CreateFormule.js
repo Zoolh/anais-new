@@ -50,14 +50,19 @@ const useStyles = makeStyles((theme) => ({
 export default function CreateFormule(props) {
   const classes = useStyles();
   const history = useHistory();
-  
+
   const selectedId = props.location.state.idFormule;
   const initialFormuleState = {
     id: null,
     libelle: "",
+    ordreSortie: null,
     description: "",
     tarif: null,
-    duree: null
+    duree: null,
+    sectionAsset: null,
+    imagePrincipale: null,
+    image2: null,
+
   };
 
   const [formule, setFormule] = useState(initialFormuleState)
@@ -107,9 +112,13 @@ export default function CreateFormule(props) {
         setFormule({
           id: response.data.id,
           libelle: response.data.libelle,
+          ordreSortie: response.data.ordreSortie,
           description: response.data.description,
           tarif: response.data.tarif,
           duree: response.data.duree,
+          sectionAsset: response.data.sectionAsset,
+          imagePrincipale: response.data.imagePrincipale,
+          image2: response.data.image2,
         });
         setPrestationsSelected(response.data.prestation)
       })
@@ -121,9 +130,13 @@ export default function CreateFormule(props) {
   const saveFormule = () => {
     var data = {
       libelle: formule.libelle,
+      ordreSortie:formule.ordreSortie,
       description: formule.description,
       tarif: formule.tarif,
-      duree: totalDuration
+      duree: formule.duree,
+      sectionAsset: formule.sectionAsset,
+      imagePrincipale: formule.imagePrincipale,
+      image2: formule.image2,
     };
 
     FormuleDataService.create(data)
@@ -131,9 +144,13 @@ export default function CreateFormule(props) {
         setFormule({
           id: response.data.id,
           libelle: response.data.libelle,
+          ordreSortie:response.data.ordreSortie,
           description: response.data.description,
           tarif: response.data.tarif,
-          duree: response.data.duree
+          duree: response.data.duree,
+          sectionAsset: response.data.sectionAsset,
+          imagePrincipale: response.data.imagePrincipale,
+          image2: response.data.image2,
         });
         var idFormule = response.data.id
         prestationsSelected.map((prestation, key) => {
@@ -166,7 +183,6 @@ export default function CreateFormule(props) {
   }
 
   const saveModification = () => {
-    formule.duree = totalDuration
     FormuleDataService.update(formule.id, formule)
       .then(response => {
         // Remove presta for Formule
@@ -256,35 +272,87 @@ export default function CreateFormule(props) {
                   />
                 </GridItem>
                 <GridItem xs={12} sm={12} md={6}>
-                  <InputLabel style={{ color: "#AAAAAA" }}>
-                    Durée :
-                    <TimeConverter
-                      key={totalDuration}
-                      timeToConvert={totalDuration} >
-                    </TimeConverter>
-                  </InputLabel>
-                  <br />
+                  <CustomInput
+                    labelText="Durée"
+                    id="duree"
+                    formControlProps={{ fullWidth: true }}
+                    onChange={handleInputChange}
+                    value={formule.duree}
+                    inputProps={{
+                      disabled: isDisable
+                    }}
+                  />
+                </GridItem>
+                <GridItem xs={12} sm={12} md={6}>
+                  <CustomInput
+                    labelText="Ordre Sortie"
+                    id="ordreSortie"
+                    formControlProps={{ fullWidth: true }}
+                    onChange={handleInputChange}
+                    value={formule.ordreSortie}
+                    inputProps={{
+                      disabled: isDisable
+                    }}
+                  />
+                </GridItem>
+                <GridItem xs={12} sm={12} md={6}>
                   <InputLabel style={{ color: "#AAAAAA" }}>Prestations ({prestationsSelected.length}) :
-                  {prestationsSelected.map((prestation, key) => {
-                    return " " + prestation.libelle + " / "
-                  })}
+                    {prestationsSelected.map((prestation, key) => {
+                      return " " + prestation.libelle + " / "
+                    })}
                   </InputLabel>
                   <br />
                   <InputLabel style={{ color: "#AAAAAA" }}>Total prix suggéré : {suggestedPrice}€</InputLabel>
                 </GridItem>
               </GridContainer>
               <GridContainer>
-                <GridItem xs={12} sm={12} md={12}>
+                
+                <GridItem xs={12} sm={12} md={6}>
                   <CustomInput
                     labelText="Description"
                     id="description"
                     formControlProps={{ fullWidth: true }}
-                    inputProps={{
-                      multiline: true,
-                      rows: 5
-                    }}
                     onChange={handleInputChange}
                     value={formule.description}
+                    inputProps={{
+                      disabled: isDisable
+                    }}
+                  />
+                </GridItem>
+
+                <GridItem xs={12} sm={12} md={6}>
+                  <CustomInput
+                    labelText="sous dossier image"
+                    id="sectionAsset"
+                    formControlProps={{ fullWidth: true }}
+                    onChange={handleInputChange}
+                    value={formule.sectionAsset}
+                    inputProps={{
+                      disabled: isDisable
+                    }}
+                  />
+                </GridItem>
+
+                <GridItem xs={12} sm={12} md={6}>
+                  <CustomInput
+                    labelText="image principale"
+                    id="imagePrincipale"
+                    formControlProps={{ fullWidth: true }}
+                    onChange={handleInputChange}
+                    value={formule.imagePrincipale}
+                    inputProps={{
+                      disabled: isDisable
+                    }}
+                  />
+                </GridItem>
+
+                <GridItem xs={12} sm={12} md={6}>
+                  <CustomInput
+                    labelText="image 2"
+                    id="image2"
+                    formControlProps={{ fullWidth: true }}
+                    onChange={handleInputChange}
+                    value={formule.image2}
                     inputProps={{
                       disabled: isDisable
                     }}
@@ -319,13 +387,13 @@ export default function CreateFormule(props) {
                     <Button color="primary" onClick={e => backToList()}>Retour</Button>
                   </GridItem>
                 </CardFooter>) : (
-                  <CardFooter>
-                    <GridItem>
-                      <Button color="primary" onClick={e => saveModification()}>Sauvegarder</Button>
-                      <Button color="primary" onClick={e => backToList()}>Retour</Button>
-                    </GridItem>
-                  </CardFooter>
-                )}
+                <CardFooter>
+                  <GridItem>
+                    <Button color="primary" onClick={e => saveModification()}>Sauvegarder</Button>
+                    <Button color="primary" onClick={e => backToList()}>Retour</Button>
+                  </GridItem>
+                </CardFooter>
+              )}
           </Card>
         </GridItem>
       </GridContainer>

@@ -7,7 +7,7 @@ module.exports = app => {
   router.post("/", formules.create);
 
   // Retrieve all Formules
-  router.get("/", formules.findAll);
+  router.get("/getAll", formules.findAll);
 
   // Retrieve a single Formule with id
   router.get("/:id", formules.findOne);

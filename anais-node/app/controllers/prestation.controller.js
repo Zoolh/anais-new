@@ -18,8 +18,8 @@ exports.create = (req, res) => {
         libelle: req.body.libelle,
         description: req.body.description,
         tarif: req.body.tarif,
-        duree: req.body.duree
-
+        duree: req.body.duree,
+        ordreSortie: req.body.ordreSortie
     };
 
     // Save Prestation in the database

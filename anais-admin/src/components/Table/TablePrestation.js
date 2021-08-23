@@ -52,10 +52,7 @@ export default function CustomTable(props) {
                   {prop.description}
                 </TableCell>
                 <TableCell className={classes.tableCell}>
-                  {prop.tarif} €
-                </TableCell>
-                <TableCell className={classes.tableCell}>
-                  {prop.duree} min
+                  {prop.ordreSortie} 
                 </TableCell>
 
                 <TableCell className={classes.tableCell}>

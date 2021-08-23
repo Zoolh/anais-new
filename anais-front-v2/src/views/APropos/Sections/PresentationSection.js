@@ -9,12 +9,13 @@ import { makeStyles } from "@material-ui/core/styles";
 
 import officeStyle from "assets/jss/material-kit-pro-react/views/aboutUsSections/officeStyle.js";
 
-// office
-import office1 from "assets/img/examples/office1.jpg";
-import office2 from "assets/img/examples/office2.jpg";
-import office3 from "assets/img/examples/office3.jpg";
-import office4 from "assets/img/examples/office4.jpg";
-import office5 from "assets/img/examples/office5.jpg";
+import office1 from "assets/img/assets-anais/aPropos/femmeMature.jpg";
+import office2 from "assets/img/assets-anais/aPropos/colo.jpg";
+import office3 from "assets/img/assets-anais/aPropos/femme1.jpg";
+import office4 from "assets/img/assets-anais/aPropos/accueil.jpg";
+import office5 from "assets/img/assets-anais/aPropos/makeup1.jpg";
+import office6 from "assets/img/assets-anais/aPropos/accueil2.jpg";
+
 
 const useStyles = makeStyles(officeStyle);
 
@@ -56,7 +57,7 @@ export default function SectionOffice() {
             alt="office3"
           />
         </GridItem>
-        <GridItem md={6} sm={6}>
+        <GridItem md={4} sm={4}>
           <img
             className={classNames(
               classes.imgRaised,
@@ -65,6 +66,17 @@ export default function SectionOffice() {
             )}
             src={office4}
             alt="office4"
+          />
+        </GridItem>
+        <GridItem md={4} sm={4}>
+          <img
+            className={classNames(
+              classes.imgRaised,
+              classes.imgFluid,
+              classes.rounded
+            )}
+            src={office6}
+            alt="office6"
           />
         </GridItem>
         <GridItem md={6} sm={6}>
@@ -78,6 +90,8 @@ export default function SectionOffice() {
             alt="office5"
           />
         </GridItem>
+     
+        
       </GridContainer>
     </div>
   );
