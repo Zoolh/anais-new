@@ -33,13 +33,11 @@ export default function LandingPage({ ...rest }) {
   return (
     <div>
       <Header
-        color="roseCharte"
         brand="Logo Anaïs"
         links={<HeaderLinks dropdownHoverColor="info" />}
         fixed
         changeColorOnScroll={{
-          height: 300,
-          color: "roseCharte"
+          height: 300
         }}
         {...rest} />
 
@@ -65,7 +63,6 @@ export default function LandingPage({ ...rest }) {
             <br/>
             <br/>
             <Button
-              color="roseCharte"
               size="lg"
               href=""
               target="_blank">

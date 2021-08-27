@@ -1,25 +1,25 @@
 @font-face {
     font-family: "Quentin";
-    src: url(../fonts/Quentin.otf) format('opentype');
+    src: url(./fonts/Quentin.otf) format('opentype');
   }
 
 
 @font-face {
     font-family: "CaviarBold";
-    src: url(../fonts/CaviarDreams_Bold.ttf) format('truetype');
+    src: url(./fonts/caviardreams_bold-webfont.woff) format('woff');
 }
 
 @font-face {
     font-family: "CaviarBoldItalic";
-    src: url(../fonts/CaviarDreams_BoldItalic.ttf) format('truetype');
+    src: url(./fonts/caviardreams_bolditalic-webfont.woff) format('woff');
 }
 
 @font-face {
     font-family: "CaviarItalic";
-    src: url(../fonts/CaviarDreams_Italic.ttf) format('truetype');
+    src: url(./fonts/caviardreams_italic-webfont.woff) format('woff');
 }
 
 @font-face {
     font-family: "CaviarClassique";
-    src: url(../fonts/CaviarDreams.ttf) format('truetype');
+    src: url(./fonts/caviardreams-webfont.woff) format('woff');
 }
