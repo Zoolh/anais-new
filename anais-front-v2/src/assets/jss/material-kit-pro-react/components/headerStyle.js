@@ -14,10 +14,6 @@ import {
   whiteColor,
   grayColor,
   roseCharte,
-  marronCharte,
-  violetCharte,
-  orangeCharte,
-  blancCharte,
   hexToRgb
 } from "assets/jss/material-kit-pro-react.js";
 

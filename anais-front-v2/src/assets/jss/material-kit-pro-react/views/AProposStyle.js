@@ -5,7 +5,6 @@ import {
   main,
   mainRaised,
   mrAuto,
-  whiteColor,
   mlAuto,
   blancCharte
 } from "assets/jss/material-kit-pro-react.js";
@@ -26,8 +25,8 @@ const aboutUsStyle = {
   },
   title: {
     ...title,
-    ["@media (max-height:700px)"]: { marginTop:"25%" },
-    ["@media (min-height:700px)"]: { marginTop:"10%" },
+    "@media (max-height:700px)": { marginTop:"25%" },
+    "@media (min-height:700px)": { marginTop:"10%" },
     "&, & + h1": {
       color: dark,
       fontFamily: "Quentin",
@@ -35,8 +34,8 @@ const aboutUsStyle = {
   },
   subTitle:{
     fontFamily: "CaviarItalic !important",
-    ["@media (max-height:700px)"]: { marginBottom:"20%" },
-    ["@media (min-height:700px)"]: { marginBottom:"10%" },
+    "@media (max-height:700px)": { marginBottom:"20%" },
+    "@media (min-height:700px)": { marginBottom:"10%" },
   },
   textCenter: {
     textAlign: "center"

@@ -53,7 +53,7 @@ export default function ExampleTooltipsPopovers(props) {
             )
         } catch (error) {
             return (
-                <img src="" alt="ATTENTE D'UNE IMAGE" />
+                <img src="" alt="" />
             )
         }
     }

@@ -8,7 +8,7 @@
     "animate.css": "4.1.0",
     "axios": "^0.21.1",
     "classnames": "2.2.6",
-    "dotenv": "^8.2.0",
+    "dotenv": "^8.6.0",
     "history": "4.10.1",
     "moment": "2.26.0",
     "node-sass": "4.14.1",
@@ -30,8 +30,8 @@
     "redux-thunk": "^2.3.0"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build && gulp licenses",
+    "start": "env-cmd -f ./src/environments/.env react-scripts start",
+    "build": "env-cmd -f ./src/environments/.env.prod react-scripts build && gulp licenses",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "lint:check": "eslint . --ext=js,jsx;  exit 0",

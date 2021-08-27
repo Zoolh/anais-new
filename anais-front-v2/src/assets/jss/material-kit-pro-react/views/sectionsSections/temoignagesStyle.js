@@ -10,10 +10,6 @@ import {
   blackColor,
   whiteColor,
   hexToRgb,
-  roseCharte,
-  marronCharte,
-  violetCharte,
-  orangeCharte,
   blancCharte
 } from "assets/jss/material-kit-pro-react.js";
 
@@ -23,23 +19,13 @@ const testimonialsSection = {
   mrAuto,
   title,
   description,
-  cardTitle,
-  // sectionDark: {
-  //   ...sectionDark,
-  //   "& $cardDescription": {
-  //     color: "rgba(" + hexToRgb(whiteColor) + ", 0.76)"
-  //   },
-  //   "& $cardTitle": {
-  //     color: whiteColor
-  //   },
-  //   backgroundSize: "550% 450%"
-  // },
   cardDescription: {
     ...description,
     fontFamily: "CaviarItalic !important",
     fontSize: "1.5rem !important"
   },
   cardTitle: {
+    ...cardTitle,
     fontFamily: "Quentin !important",
     fontSize: "3rem !important"
   },

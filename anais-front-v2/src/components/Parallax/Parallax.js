@@ -1,8 +1,6 @@
 import React from "react";
 // nodejs library that concatenates classes
 import classNames from "classnames";
-// nodejs library to set properties for components
-import PropTypes from "prop-types";
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
 
@@ -35,7 +33,7 @@ export default function Parallax(props) {
     var windowScrollTop = window.pageYOffset / 3;
     setTransform("translate3d(0," + windowScrollTop + "px,0)");
   };
-  const { filter, className, children, style, image, small, backgroundColor, color } = props;
+  const { filter, className, children, style, small, backgroundColor, color } = props;
   const classes = useStyles();
   const parallaxClasses = classNames({
     [classes.parallax]: true,

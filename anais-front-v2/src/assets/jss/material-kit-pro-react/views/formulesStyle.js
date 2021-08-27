@@ -7,18 +7,14 @@ import {
   title,
   cardTitle,
   grayColor,
-  roseColor,
   roseCharte,
   marronCharte,
-  violetCharte,
-  orangeCharte,
   blancCharte
 } from "assets/jss/material-kit-pro-react.js";
 
 import tooltipsStyle from "assets/jss/material-kit-pro-react/tooltipsStyle.js";
 import imagesStyles from "assets/jss/material-kit-pro-react/imagesStyles.js";
 import customSelectStyle from "assets/jss/material-kit-pro-react/customSelectStyle.js";
-import { useMediaQuery } from "@material-ui/core";
 
 const productStyle = {
   formulesContainer: {
@@ -233,8 +229,8 @@ const productStyle = {
   },
   dialogPaper: {
     display:"block !important",
-    ["@media (max-height:400px)"]: { minWidth: "0rem" },
-    ["@media (min-height:700px)"]: { minWidth: "80rem" }
+    "@media (max-height:400px)": { minWidth: "0rem" },
+    "@media (min-height:700px)": { minWidth: "80rem" }
   }
   ,
   imgDesc: {

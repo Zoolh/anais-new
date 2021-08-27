@@ -6,11 +6,6 @@ import {
   successColor,
   warningColor,
   dangerColor,
-  roseCharte,
-  marronCharte,
-  violetCharte,
-  orangeCharte,
-  blancCharte,
   hexToRgb
 } from "assets/jss/material-kit-pro-react.js";
 
