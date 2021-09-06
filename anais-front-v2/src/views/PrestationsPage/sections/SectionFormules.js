@@ -55,7 +55,8 @@ export default function SectionFormules() {
           .concat("/")
           .concat(nomImage)
           .concat(".jpg"))}
-          alt="rien" />
+          alt="rien" 
+          className={classes.mainImg}/>
       )
     } catch (error) {
       return (
@@ -71,7 +72,7 @@ export default function SectionFormules() {
         <div className={classes.container}>
           <div className={classes.relatedProducts}>
             <GridContainer className={classes.formulesContainer}>
-              {listeFormules.map((formule, index) => {
+              {listeFormules.sort((a, b) => a.ordreSortie > b.ordreSortie ? 1 : -1).map((formule, index) => {
                 return (
                   <GridItem sm={6} md={3} lg={6} key={index} onClick={() => setOpenFormuleModal(true)} >
                     <Card product className={classes.formuleCard}>

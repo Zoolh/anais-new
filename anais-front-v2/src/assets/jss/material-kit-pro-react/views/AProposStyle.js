@@ -25,8 +25,8 @@ const aboutUsStyle = {
   },
   title: {
     ...title,
-    "@media (max-height:700px)": { marginTop:"25%" },
-    "@media (min-height:700px)": { marginTop:"10%" },
+    "@media (max-width:815px)": { marginTop:"25%" },
+    "@media (min-width:815px)": { marginTop:"10%" },
     "&, & + h1": {
       color: dark,
       fontFamily: "Quentin",
@@ -34,8 +34,8 @@ const aboutUsStyle = {
   },
   subTitle:{
     fontFamily: "CaviarItalic !important",
-    "@media (max-height:700px)": { marginBottom:"20%" },
-    "@media (min-height:700px)": { marginBottom:"10%" },
+    "@media (max-width:815px)": { marginBottom:"35%" },
+    "@media (min-width:815px)": { marginBottom:"15%" },
   },
   textCenter: {
     textAlign: "center"

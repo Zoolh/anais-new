@@ -15,7 +15,9 @@ import office3 from "assets/img/assets-anais/aPropos/femme1.jpg";
 import office4 from "assets/img/assets-anais/aPropos/accueil.jpg";
 import office5 from "assets/img/assets-anais/aPropos/makeup1.jpg";
 import office6 from "assets/img/assets-anais/aPropos/accueil2.jpg";
-
+import office7 from "assets/img/assets-anais/aPropos/apropos-5.jpg"
+import office8 from "assets/img/assets-anais/aPropos/apropos-4.jpg"
+import office9 from "assets/img/assets-anais/aPropos/apropos-6.jpg"
 
 const useStyles = makeStyles(officeStyle);
 
@@ -57,17 +59,8 @@ export default function SectionOffice() {
             alt="office3"
           />
         </GridItem>
-        <GridItem md={4} sm={4}>
-          <img
-            className={classNames(
-              classes.imgRaised,
-              classes.imgFluid,
-              classes.rounded
-            )}
-            src={office4}
-            alt="office4"
-          />
-        </GridItem>
+       
+
         <GridItem md={4} sm={4}>
           <img
             className={classNames(
@@ -79,6 +72,44 @@ export default function SectionOffice() {
             alt="office6"
           />
         </GridItem>
+        <GridItem md={4} sm={4}>
+          <img
+            className={classNames(
+              classes.imgRaised,
+              classes.imgFluid,
+              classes.rounded
+            )}
+            src={office4}
+            alt="office4"
+          />
+        </GridItem>
+
+        <GridItem md={4} sm={4}>
+          <img
+            className={classNames(
+              classes.imgRaised,
+              classes.imgFluid,
+              classes.rounded
+            )}
+            src={office7}
+            alt="office7"
+          />
+        </GridItem>
+
+{/* TODO : à corriger rajouter car juste ajout d'une image vide pour centrer */}
+        <GridItem md={3} sm={3}>
+          <img
+            className={classNames(
+              classes.imgRaised,
+              classes.imgFluid,
+              classes.rounded
+            )}
+            // src={}
+            alt=""
+          />
+        </GridItem>
+
+
         <GridItem md={6} sm={6}>
           <img
             className={classNames(
@@ -90,8 +121,21 @@ export default function SectionOffice() {
             alt="office5"
           />
         </GridItem>
-     
-        
+
+        {/* <GridItem md={4} sm={4}>
+          <img
+            className={classNames(
+              classes.imgRaised,
+              classes.imgFluid,
+              classes.rounded
+            )}
+            src={office9}
+            alt="office9"
+          />
+        </GridItem>
+
+      */}
+
       </GridContainer>
     </div>
   );

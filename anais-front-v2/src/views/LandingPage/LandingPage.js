@@ -1,9 +1,12 @@
-/*eslint-disable*/ import React from "react";
+/*eslint-disable*/
+import React from "react";
+import { Link } from "react-router-dom";
 
 // nodejs library that concatenates classes
 import classNames from "classnames";
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
+import Hidden from "@material-ui/core/Hidden";
 
 import Box from "@material-ui/core/Box";
 
@@ -46,28 +49,32 @@ export default function LandingPage({ ...rest }) {
 
         <GridContainer color="black" className={classes.container}>
           <GridItem xs={12} sm={6} md={6}>
-            <Box xs={12} display={{ sm: "block" }}>
-              <h1 className={classes.title}>Anaïs L</h1>
-            </Box>
+            <Hidden smDown>
+              <Box xs={12} display={{ sm: "block" }}>
+                <h1 className={classes.title}>Anaïs L</h1>
+              </Box></Hidden>
 
             <h4 className={classes.intro}>
-              Votre agence de conseil en image & communication <br/>
+              Votre agence de conseil en image & communication <br />
               adopte une approche personnalisée et vous accompagne avec bienveillance dans la définition de votre image.
             </h4>
-            <br/>
-            <h4 className={classes.slogan}>
-              LOOK GOOD TO FEEL GOOD*
-            </h4>
-            <span className={classes.traduction}>*Ca fait du bien de se sentier bien</span>
             <br />
-            <br/>
-            <br/>
-            <Button
-              size="lg"
-              href=""
-              target="_blank">
-              Mes prestations
-            </Button>
+            <h4 className={classes.slogan}>
+              Look Good To Feel Good*
+            </h4>
+            <span className={classes.traduction}>*Ca fait du bien de se sentir bien</span>
+            <br />
+            <br />
+            <br />
+
+            <Link to="/prestations-page">
+              <Button
+                size="lg">
+                Mes prestations
+              </Button>
+            </Link>
+
+
           </GridItem>
 
           <GridItem xs={12} sm={6} md={6} >
@@ -78,11 +85,11 @@ export default function LandingPage({ ...rest }) {
 
         </GridContainer>
       </Parallax>
-      <div className={classNames(classes.main, classes.mainRaised, classes.mainSection)}>
+      {/* <div className={classNames(classes.main, classes.mainRaised, classes.mainSection)}>
         <div className={classes.container}>
           <TemoignagesSection />
         </div>
-      </div>
+      </div> */}
       <Footer />
     </div>
   );

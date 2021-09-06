@@ -25,7 +25,11 @@ const servicesStyle = {
   },
   imgRaised,
   rounded,
-  imgFluid
+  imgFluid,
+  customImg:{
+    maxHeight:"250px"
+  }
+  
 };
 
 export default servicesStyle;

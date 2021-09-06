@@ -50,7 +50,9 @@ const productStyle = {
     marginTop:"15%",
     marginBottom: 0,
     fontFamily: "CaviarBoldItalic !important",
-    textTransform: "uppercase"
+    textTransform: "uppercase",
+    "@media (max-width:815px)": { fontSize: "1.5rem", marginTop:"25%"  },
+    "@media (min-width:816px)": { minWidth: "80rem" }
   },
   subTitle:{
     fontFamily: "CaviarItalic !important",
@@ -229,13 +231,16 @@ const productStyle = {
   },
   dialogPaper: {
     display:"block !important",
-    "@media (max-height:400px)": { minWidth: "0rem" },
-    "@media (min-height:700px)": { minWidth: "80rem" }
+    "@media (max-width:815px)": { minWidth: "0rem" },
+    "@media (min-width:816px)": { minWidth: "80rem" }
   }
-  ,
+  ,  
   imgDesc: {
     // maxHeight:"20em",
     marginTop:"10%"
+  },
+  mainImg: {
+    maxHeight:"340px"
   }
 };
 

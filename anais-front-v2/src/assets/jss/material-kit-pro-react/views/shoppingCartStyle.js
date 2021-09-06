@@ -73,7 +73,8 @@ const styles = {
     overflow: "hidden",
     display: "block",
     "& img": {
-      width: "100%"
+      width: "100%",
+      maxHeight: "340px"
     }
   },
   description: {

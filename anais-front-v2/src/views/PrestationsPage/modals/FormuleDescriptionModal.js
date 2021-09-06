@@ -100,7 +100,10 @@ export default function ExampleTooltipsPopovers(props) {
                             <h4 className={classes.sectionTitle}>DUREE & TARIF</h4>
                             <p className={classes.description}>
                                 Durée : {formule.duree} <br />
-                                Tarif : {formule.tarif}€
+                                {formule.tarif != 0 ? <p>Tarif : {formule.tarif}€</p> :
+                                <p>Tarif : Devis sur mesure</p>
+                                }
+                                
                             </p>
                         </GridItem>
                     </GridContainer>

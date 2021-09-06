@@ -49,25 +49,9 @@ export default function Footer(props) {
         )}
          <div>
             <div className={classes.left}>
-              <List className={classes.list}>
-                <ListItem className={classes.inlineBlock}>
-                  <a
-                    href="#"
-                    target="_blank"
-                    className={classes.block}
-                  >
-                    A propos
-                  </a>
-                </ListItem>
-                <ListItem className={classes.inlineBlock}>
-                  <a href="#" className={classes.block}>
-                    Blog
-                  </a>
-                </ListItem>
-              </List>
             </div>
             <div className={classes.right}>
-              &copy; Nicolas
+              &copy; AnaïsL - Tous droits réservés
             </div>
           </div>
         <div className={classes.clearFix} />

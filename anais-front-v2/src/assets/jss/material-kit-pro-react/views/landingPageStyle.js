@@ -12,7 +12,9 @@ const landingPageStyle = {
   container: {
     color: whiteColor,
     ...container,
-    zIndex: "2"
+    zIndex: "2",
+    "@media (max-width:815px)": {  marginTop:"-40%" }
+   
   },
   title: {
     ...title,

@@ -67,7 +67,7 @@ export default function BeautePage() {
                 Retrouvez différentes prestations pour un accompagnement sur mesure.<br/>
                 Que vous souhaitiez simplement un tri de dressing à domicile ou un bilan d'image complet, mon accompagnement
                 reposera toujours sur la bienveillance et l'écoute de vos besoins.<br/>
-                Si vous souhaitez ajuster une formules, n'hésitez pas à me contacter.
+                Si vous souhaitez ajuster une formule, n'hésitez pas à me contacter.
               </h4>
             </GridItem>
           </GridContainer>            
