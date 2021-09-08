@@ -104,6 +104,7 @@ Accordion.propTypes = {
     "danger",
     "success",
     "info",
-    "rose"
+    "rose",
+    "roseCharte"
   ])
 };

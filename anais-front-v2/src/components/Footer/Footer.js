@@ -6,10 +6,8 @@ import PropTypes from "prop-types";
 import classNames from "classnames";
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
-import List from "@material-ui/core/List";
-import ListItem from "@material-ui/core/ListItem";
 // @material-ui/icons
-import Favorite from "@material-ui/icons/Favorite";
+import { Link } from "react-router-dom";
 
 import footerStyle from "assets/jss/material-kit-pro-react/components/footerStyle.js";
 import landingPageStyle from "assets/jss/material-kit-pro-react/views/landingPageStyle.js";
@@ -47,13 +45,14 @@ export default function Footer(props) {
         ) : (
           " "
         )}
-         <div>
-            <div className={classes.left}>
-            </div>
-            <div className={classes.right}>
-              &copy; AnaïsL - Tous droits réservés
-            </div>
+        <div>
+
+          <div >
+          <a className="fab fa-instagram" href="https://www.instagram.com/anaislconseil/" target="_blank"/>  <a className="fab fa-facebook-square" href="https://www.facebook.com/Ana%C3%AFsL-Conseil-105846888371441" target="_blank"/>
+            <p className={classes.center}> BORDEAUX | PARIS | REIMS </p>
+            <p div className={classes.right}> {/* <Link to="/bon-cadeau-page" className={classes.dropdownLink}>Mentions légales</Link> - */}&copy; AnaïsL - Tous droits réservés</p> 
           </div>
+        </div>
         <div className={classes.clearFix} />
       </div>
     </footer>

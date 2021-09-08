@@ -4,7 +4,9 @@ import {
   successColor,
   whiteColor,
   grayColor,
-  defaultFont
+  defaultFont,
+  marronCharte,
+  roseCharte
 } from "assets/jss/material-kit-pro-react.js";
 
 const customInputStyle = {
@@ -19,7 +21,7 @@ const customInputStyle = {
       borderBottomWidth: "1px !important"
     },
     "&:after": {
-      borderBottomColor: primaryColor[0]
+      borderBottomColor: roseCharte
     }
   },
   underlineError: {

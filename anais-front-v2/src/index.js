@@ -11,6 +11,8 @@ import StylePage from "views/StylePage/StylePage.js";
 import PrestationsPage from "views/PrestationsPage/PrestationsPage";
 import AProposPage from "views/APropos/AProposPage.js";
 import ContactPage from "views/ContactPage/ContactPage.js"
+import FaqPage from "views/FaqPage/FaqPage.js"
+import BonCadeauPage from "views/BonCadeauPage/BonCadeauPage";
 
 var hist = createBrowserHistory();
 
@@ -21,6 +23,8 @@ ReactDOM.render(
       <Route path="/prestations-page" component={PrestationsPage} />
       <Route path="/a-propos-page" component={AProposPage} />
       <Route path="/contact-page" component={ContactPage} />
+      <Route path="/questions-page" component={FaqPage} />
+      <Route path="/bon-cadeau-page" component={BonCadeauPage} />
       <Route path="/" component={LandingPage} />
     </Switch>
   </Router>,

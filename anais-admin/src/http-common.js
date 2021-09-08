@@ -1,7 +1,8 @@
 import axios from "axios";
 
 export default axios.create({
-  baseURL: "http://localhost:8080/api",
+  // TODO : ajouter un .env
+  baseURL: "https://anaisl-conseil.herokuapp.com/api",
   headers: {
     "Content-type": "application/json",
     'Access-Control-Allow-Origin': '*',

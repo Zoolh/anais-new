@@ -69,7 +69,8 @@ export default function LandingPage({ ...rest }) {
 
             <Link to="/prestations-page">
               <Button
-                size="lg">
+                size="lg"
+                color="roseCharte">
                 Mes prestations
               </Button>
             </Link>

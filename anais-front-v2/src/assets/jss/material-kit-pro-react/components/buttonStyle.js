@@ -20,7 +20,9 @@ import {
   dribbbleColor,
   redditColor,
   instagramColor,
-  hexToRgb
+  hexToRgb,
+  roseCharte,
+  marronCharte
 } from "assets/jss/material-kit-pro-react.js";
 
 const buttonStyle = {
@@ -236,6 +238,13 @@ const buttonStyle = {
         ", 0.12), 0 8px 10px -5px rgba(" +
         hexToRgb(dangerColor[0]) +
         ", 0.2)"
+    }
+  },
+  roseCharte:{
+    backgroundColor: roseCharte,
+    "&:hover,&:focus": {
+      backgroundColor: marronCharte,
+      boxShadow: marronCharte
     }
   },
   rose: {

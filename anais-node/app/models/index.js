@@ -6,7 +6,24 @@ const sequelize = new Sequelize(dbConfig.DB, dbConfig.USER, dbConfig.PASSWORD, {
   host: dbConfig.HOST,
   dialect: dbConfig.dialect,
   operatorsAliases: false,
-
+  port: 5432,
+  logging: false,
+  dialectOptions: {
+    ssl: {
+      require: true,
+      rejectUnauthorized: false,
+    },
+    keepAlive: true,
+  },
+  ssl: true,
+  define: {
+    timestamps: false,
+  },
+  define: {
+    freezeTableName: true,
+    updatedAt: false,
+    createdAt: false
+  },
   pool: {
     max: dbConfig.pool.max,
     min: dbConfig.pool.min,

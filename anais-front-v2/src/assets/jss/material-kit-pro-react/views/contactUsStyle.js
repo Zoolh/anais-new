@@ -17,6 +17,17 @@ const contactUsStyle = {
     ...container,
     maxWidth: "970px !important"
   },
+  customContent: {
+    marginTop: "10%"
+  },
+  titleCustom: {
+    // fontFamily: "CaviarBold"
+    fontFamily: "CaviarBoldItalic !important",
+    textTransform: "uppercase"
+  },
+  subTitbleCustom:{
+    fontFamily: "CaviarItalic"
+  },
   contactContent: {
     paddingBottom: "40px",
     paddingTop: "40px"

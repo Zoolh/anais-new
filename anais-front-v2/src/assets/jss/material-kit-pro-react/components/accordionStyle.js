@@ -6,7 +6,8 @@ import {
   successColor,
   infoColor,
   roseColor,
-  grayColor
+  grayColor,
+  roseCharte
 } from "assets/jss/material-kit-pro-react.js";
 
 const accordionStyle = theme => ({
@@ -52,6 +53,12 @@ const accordionStyle = theme => ({
       color: dangerColor[0]
     }
   },
+  roseCharte:{
+    color:roseCharte,
+    "&:hover": {
+      color: roseCharte
+    }
+  },
   successExpansionPanelSummary: {
     "&:hover": {
       color: successColor[0]
@@ -64,7 +71,7 @@ const accordionStyle = theme => ({
   },
   roseExpansionPanelSummary: {
     "&:hover": {
-      color: roseColor[0]
+      color: roseCharte
     }
   },
   expansionPanelSummaryExpaned: {
@@ -102,7 +109,7 @@ const accordionStyle = theme => ({
     color: infoColor[0]
   },
   roseExpansionPanelSummaryExpaned: {
-    color: roseColor[0]
+    color: roseCharte
   },
   expansionPanelSummaryContent: {
     margin: "0 !important"
