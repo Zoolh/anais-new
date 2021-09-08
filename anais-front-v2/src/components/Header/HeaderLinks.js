@@ -104,7 +104,7 @@ export default function HeaderLinks(props) {
           <Button
             className={classes.navLink}
             color="transparent">
-            Carte Cadeaux
+            Carte Cadeau
         </Button>
         </Link>
       </ListItem>

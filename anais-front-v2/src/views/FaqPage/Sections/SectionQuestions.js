@@ -106,6 +106,11 @@ export default function SectionFormules() {
                       />
                     </GridItem>
 
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+
                     <h4 className={classes.cardTitle}>50 minutes de Mode via Zoom</h4>
 
                     <GridItem xs={12} sm={12} md={12} lg={12}>
@@ -116,8 +121,7 @@ export default function SectionFormules() {
                           {
                             title: <h4 className={classes.texteQuestions}>Comment faire pour réserver ? </h4>,
                             content:
-                              <p className={classes.texteReponses}>Pour réserver la formule 50 minutes de Mode, il vous suffit de vous rendre dans la rubrique contact et de sélectionner
-                                dans la liste déroulante, « réservation 50 minutes de mode » sans oublier de renseigner vos coordonnées et la date
+                              <p className={classes.texteReponses}>Pour réserver la formule 50 minutes de Mode, il vous suffit de vous rendre dans la rubrique contact et de l'indiquer dans le sujet, sans oublier de renseigner vos coordonnées,  la date
                                 et l’heure souhaitées.<br />
                                 Je vous contacterai directement pour vous confirmer le rendez-vous.
                               </p>

@@ -62,7 +62,9 @@ export default function AProposPage({ ...rest }) {
                 ensemble le style qui vous correspond le mieux.</strong><br /><br/>
                 Passionnée par la mode et la beauté depuis toujours, j’ai obtenu un <strong>Master en Marketing spécialité Mode & Luxe</strong>,
                 au terme duquel j’ai pu travailler auprès de grandes marques pendant plus de cinq ans. <br/>
-                J’ai ensuite décidé de concrétiser ma passion en intégrant le centre de formation IDM pour aujourd’hui pouvoir la partager avec vous.
+                J’ai ensuite décidé de concrétiser ma passion en intégrant le centre de formation IDM (Image de Mark), 
+                l'un des rares <strong>établissement certifiant en France reconnu par l'Etat</strong>, pour aujourd’hui pouvoir 
+                la partager avec vous.
                 <br/><br/>
                 Je vous promets des séances à la fois agréables et efficaces au cours desquelles vous pourrez
                 profiter de mon expertise tout en prenant soin de vous. <br/>

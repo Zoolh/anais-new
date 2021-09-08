@@ -28,7 +28,9 @@ export default function CustomInput(props) {
     error,
     white,
     inputRootCustomClasses,
-    success
+    success,
+    value,
+    onChange
   } = props;
   const classes = useStyles();
   const labelClasses = classNames({
@@ -58,8 +60,8 @@ export default function CustomInput(props) {
     formControlClasses = classes.formControl;
   }
   let newInputProps = {
-    maxLength: inputProps ? inputProps.maxLength:undefined,
-    minLength: inputProps ? inputProps.minLength:undefined
+    maxLength: inputProps ? inputProps.maxLength : undefined,
+    minLength: inputProps ? inputProps.minLength : undefined
   };
   return (
     <FormControl {...formControlProps} className={formControlClasses}>
@@ -73,6 +75,8 @@ export default function CustomInput(props) {
         </InputLabel>
       ) : null}
       <Input
+        value={value}
+        onChange={onChange}
         classes={{
           input: inputClasses,
           root: marginTop,
