@@ -13,7 +13,9 @@ const landingPageStyle = {
     color: whiteColor,
     ...container,
     zIndex: "2",
-    "@media (max-width:815px)": {  marginTop:"-40%" }
+    // "@media (max-height:568px)": {  paddingTop:"40%" },
+    // "@media (max-height:667px)": {  paddingTop:"40%" },
+    // "@media (min-height:815px)": {  marginTop:"-40%" }
    
   },
   title: {

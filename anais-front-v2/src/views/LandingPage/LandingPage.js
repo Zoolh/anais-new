@@ -23,7 +23,7 @@ import ProfilPicture from "components/Pictures/ProfilPicture.js";
 
 import landingPageStyle from "assets/jss/material-kit-pro-react/views/landingPageStyle.js";
 
-import TemoignagesSection from "./Sections/TemoignagesSection.js";
+// import TemoignagesSection from "./Sections/TemoignagesSection.js";
 
 const useStyles = makeStyles(landingPageStyle);
 
